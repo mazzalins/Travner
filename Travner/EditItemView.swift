@@ -47,7 +47,10 @@ struct EditItemView: View {
             }
         }
         .navigationTitle("Edit Item")
-        .onDisappear(perform: update)
+        .onChange(of: title) { _ in update() }
+        .onChange(of: detail) { _ in update() }
+        .onChange(of: priority) { _ in update() }
+        .onChange(of: completed) { _ in update() }
     }
 
     func update() {
