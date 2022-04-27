@@ -29,7 +29,54 @@ struct EditProjectView: View {
     }
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header: Text("Basic settings")) {
+                TextField("Project name", text: $title.onChange(update))
+                TextField("Description of this project", text: $detail.onChange(update))
+            }
+            
+            Section(header: Text("Custom project color")) {
+                LazyVGrid(columns: colorColumns) {
+                    ForEach(Project.colors, id: \.self) { item in
+                        ZStack {
+                            Color(item)
+                                .aspectRatio(1, contentMode: .fit)
+                                .cornerRadius(6)
+
+                            if item == color {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                            }
+                        }
+                        .onTapGesture {
+                            color = item
+                            update()
+                        }
+                    }
+                }
+                .padding(.vertical)
+            }
+
+            Section(footer: Text("Closing a project moves it from the Open to Closed tab; deleting it removes the project completely.")) {
+                Button(project.closed ? "Reopen this project" : "Close this project") {
+                    project.closed.toggle()
+                    update()
+                }
+
+                Button("Delete this project") {
+                    // delete the project
+                }
+                .accentColor(.red)
+            }
+        }
+        .navigationTitle("Edit Project")
+    }
+
+    func update() {
+        project.title = title
+        project.detail = detail
+        project.color = color
     }
 }
 
