@@ -47,6 +47,7 @@ struct EditItemView: View {
             }
         }
         .navigationTitle("Edit Item")
+        .onDisappear(perform: dataController.save)
     }
 
     func update() {
