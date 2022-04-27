@@ -14,6 +14,7 @@
 		8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */; };
 		8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB8E2819DCC4002A5B8F /* DataController.swift */; };
 		8AAEBB922819DE19002A5B8F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB912819DE19002A5B8F /* HomeView.swift */; };
+		8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8AAEBB8E2819DCC4002A5B8F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8AAEBB902819DD3B002A5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8AAEBB912819DE19002A5B8F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */,
 				8AAEBB8E2819DCC4002A5B8F /* DataController.swift */,
 				8AAEBB912819DE19002A5B8F /* HomeView.swift */,
+				8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
 				8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */,
