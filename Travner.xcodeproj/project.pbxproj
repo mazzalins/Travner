@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DA2819F72D00794895 /* EditItemView.swift */; };
 		8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */; };
 		8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7F281995B1002A5B8F /* ContentView.swift */; };
 		8AAEBB82281995B7002A5B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEBB81281995B7002A5B8F /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6040DA2819F72D00794895 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		8AAEBB7A281995B1002A5B8F /* Travner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerApp.swift; sourceTree = "<group>"; };
 		8AAEBB7F281995B1002A5B8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */,
 				8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */,
 				8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */,
+				8A6040DA2819F72D00794895 /* EditItemView.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
 			);
@@ -165,6 +168,7 @@
 				8AAEBB922819DE19002A5B8F /* HomeView.swift in Sources */,
 				8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */,
 				8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */,
+				8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
