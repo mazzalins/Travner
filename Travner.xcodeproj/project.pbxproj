@@ -12,6 +12,7 @@
 		8AAEBB82281995B7002A5B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEBB81281995B7002A5B8F /* Assets.xcassets */; };
 		8AAEBB85281995B7002A5B8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEBB84281995B7002A5B8F /* Preview Assets.xcassets */; };
 		8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */; };
+		8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB8E2819DCC4002A5B8F /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		8AAEBB81281995B7002A5B8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AAEBB84281995B7002A5B8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AAEBB8C2819DBC2002A5B8F /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		8AAEBB8E2819DCC4002A5B8F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		8AAEBB902819DD3B002A5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +56,11 @@
 		8AAEBB7C281995B1002A5B8F /* Travner */ = {
 			isa = PBXGroup;
 			children = (
+				8AAEBB902819DD3B002A5B8F /* Info.plist */,
 				8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */,
 				8AAEBB7F281995B1002A5B8F /* ContentView.swift */,
 				8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */,
+				8AAEBB8E2819DCC4002A5B8F /* DataController.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
 			);
@@ -141,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
+				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
 				8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */,
 				8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */,
 			);
@@ -274,6 +280,7 @@
 				DEVELOPMENT_TEAM = ZK5R34847G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Travner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +310,7 @@
 				DEVELOPMENT_TEAM = ZK5R34847G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Travner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
