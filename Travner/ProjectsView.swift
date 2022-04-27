@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProjectsView: View {
-    static let openTag: String = "Open"
-    static let closedTag: String = "Closed"
+    static let openTag: String? = "Open"
+    static let closedTag: String? = "Closed"
     
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
