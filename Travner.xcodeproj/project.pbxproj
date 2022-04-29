@@ -13,6 +13,7 @@
 		8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040E02819FFF700794895 /* ProjectHeaderView.swift */; };
 		8A6040E3281A00C500794895 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6040E2281A00C500794895 /* Colors.xcassets */; };
 		8A6040E5281A010400794895 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040E4281A010400794895 /* EditProjectView.swift */; };
+		8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9019F4281C31B900490A76 /* Color-Additions.swift */; };
 		8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */; };
 		8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7F281995B1002A5B8F /* ContentView.swift */; };
 		8AAEBB82281995B7002A5B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEBB81281995B7002A5B8F /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		8A6040E02819FFF700794895 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		8A6040E2281A00C500794895 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8A6040E4281A010400794895 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		8A9019F4281C31B900490A76 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		8AAEBB7A281995B1002A5B8F /* Travner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerApp.swift; sourceTree = "<group>"; };
 		8AAEBB7F281995B1002A5B8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8AFF6366281BF0AB006587AD /* Awards.json */,
 				8AFF6368281BF0B8006587AD /* Award.swift */,
 				8AFF636A281BF0DC006587AD /* AwardsView.swift */,
+				8A9019F4281C31B900490A76 /* Color-Additions.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8A6040E2281A00C500794895 /* Colors.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
@@ -200,6 +203,7 @@
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */,
+				8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */,
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
 				8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */,
 				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
