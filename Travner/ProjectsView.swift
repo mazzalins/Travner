@@ -33,6 +33,16 @@ struct ProjectsView: View {
                         ForEach(project.projectItems) { item in
                             ItemRowView(item: item)
                         }
+                        .onDelete { offsets in
+                            let allItems = project.projectItems
+
+                            for offset in offsets {
+                                let item = allItems[offset]
+                                dataController.delete(item)
+                            }
+
+                            dataController.save()
+                        }
                     }
                 }
             }
