@@ -10,59 +10,66 @@ import SwiftUI
 struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-
+    
     @EnvironmentObject var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
-
+    
     @State private var showingSortOrder = false
     @State private var sortOrder = Item.SortOrder.optimized
     
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
-
+    
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
-
+        
         projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [
             NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
         ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
     }
-
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(projects.wrappedValue) { project in
-                    Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems(using: sortOrder)) { item in
-                            ItemRowView(project: project, item: item)
-                        }
-                        .onDelete { offsets in
-                            let allItems = project.projectItems
-
-                            for offset in offsets {
-                                let item = allItems[offset]
-                                dataController.delete(item)
-                            }
-
-                            dataController.save()
-                        }
-
-                        if showClosedProjects == false {
-                            Button {
-                                withAnimation {
-                                    let item = Item(context: managedObjectContext)
-                                    item.project = project
-                                    item.creationDate = Date()
+            Group {
+                if projects.wrappedValue.count == 0 {
+                    Text("There's nothing here right now.")
+                        .foregroundColor(.secondary)
+                } else {
+                    List {
+                        ForEach(projects.wrappedValue) { project in
+                            Section(header: ProjectHeaderView(project: project)) {
+                                ForEach(project.projectItems(using: sortOrder)) { item in
+                                    ItemRowView(project: project, item: item)
+                                }
+                                .onDelete { offsets in
+                                    let allItems = project.projectItems
+                                    
+                                    for offset in offsets {
+                                        let item = allItems[offset]
+                                        dataController.delete(item)
+                                    }
+                                    
                                     dataController.save()
                                 }
-                            } label: {
-                                Label("Add New Item", systemImage: "plus")
+                                
+                                if showClosedProjects == false {
+                                    Button {
+                                        withAnimation {
+                                            let item = Item(context: managedObjectContext)
+                                            item.project = project
+                                            item.creationDate = Date()
+                                            dataController.save()
+                                        }
+                                    } label: {
+                                        Label("Add New Item", systemImage: "plus")
+                                    }
+                                }
                             }
                         }
                     }
+                    .listStyle(InsetGroupedListStyle())
                 }
             }
-            .listStyle(InsetGroupedListStyle())
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -79,7 +86,7 @@ struct ProjectsView: View {
                         }
                     }
                 }
-
+                
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         showingSortOrder.toggle()
@@ -95,13 +102,15 @@ struct ProjectsView: View {
                     .default(Text("Title")) { sortOrder = .title }
                 ])
             }
+            
+            SelectSomethingView()
         }
     }
 }
 
 struct ProjectsView_Previews: PreviewProvider {
     static var dataController = DataController.preview
-
+    
     static var previews: some View {
         ProjectsView(showClosedProjects: false)
             .environment(\.managedObjectContext, dataController.container.viewContext)
