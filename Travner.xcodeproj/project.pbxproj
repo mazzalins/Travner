@@ -28,6 +28,7 @@
 		8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6364281BF072006587AD /* Bundle-Decodable.swift */; };
 		8AFF6367281BF0AB006587AD /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AFF6366281BF0AB006587AD /* Awards.json */; };
 		8AFF6369281BF0B8006587AD /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6368281BF0B8006587AD /* Award.swift */; };
+		8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF636A281BF0DC006587AD /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		8AFF6364281BF072006587AD /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		8AFF6366281BF0AB006587AD /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
 		8AFF6368281BF0B8006587AD /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		8AFF636A281BF0DC006587AD /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				8AFF6364281BF072006587AD /* Bundle-Decodable.swift */,
 				8AFF6366281BF0AB006587AD /* Awards.json */,
 				8AFF6368281BF0B8006587AD /* Award.swift */,
+				8AFF636A281BF0DC006587AD /* AwardsView.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8A6040E2281A00C500794895 /* Colors.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
@@ -194,6 +197,7 @@
 			files = (
 				8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */,
 				8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */,
+				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */,
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
