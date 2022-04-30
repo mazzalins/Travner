@@ -16,6 +16,8 @@
 		8A882C90281D0D85004AA220 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C92281D0D85004AA220 /* Localizable.strings */; };
 		8A882C94281D0ED8004AA220 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C96281D0ED8004AA220 /* Localizable.stringsdict */; };
 		8A882C98281D1059004AA220 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C9A281D1059004AA220 /* Awards.json */; };
+		8A882C9D281D7F14004AA220 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A882C9C281D7F14004AA220 /* ItemListView.swift */; };
+		8A882C9F281D7FFA004AA220 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A882C9E281D7FFA004AA220 /* ProjectSummaryView.swift */; };
 		8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9019F4281C31B900490A76 /* Color-Additions.swift */; };
 		8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */; };
 		8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7F281995B1002A5B8F /* ContentView.swift */; };
@@ -47,6 +49,8 @@
 		8A882C97281D0F30004AA220 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "pt-BR"; path = "pt-BR.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		8A882C99281D1059004AA220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		8A882C9B281D105C004AA220 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/Awards.json"; sourceTree = "<group>"; };
+		8A882C9C281D7F14004AA220 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		8A882C9E281D7FFA004AA220 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		8A9019F4281C31B900490A76 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		8AAEBB7A281995B1002A5B8F /* Travner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerApp.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				8A9019F4281C31B900490A76 /* Color-Additions.swift */,
 				8A882C92281D0D85004AA220 /* Localizable.strings */,
 				8A882C96281D0ED8004AA220 /* Localizable.stringsdict */,
+				8A882C9C281D7F14004AA220 /* ItemListView.swift */,
+				8A882C9E281D7FFA004AA220 /* ProjectSummaryView.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8A6040E2281A00C500794895 /* Colors.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
@@ -211,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */,
+				8A882C9F281D7FFA004AA220 /* ProjectSummaryView.swift in Sources */,
 				8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */,
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
@@ -225,6 +232,7 @@
 				8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */,
 				8A6040DF2819F8EC00794895 /* Binding-OnChange.swift in Sources */,
 				8AFF6361281BB632006587AD /* Sequence-Sorting.swift in Sources */,
+				8A882C9D281D7F14004AA220 /* ItemListView.swift in Sources */,
 				8AAEBB922819DE19002A5B8F /* HomeView.swift in Sources */,
 				8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */,
 				8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */,
