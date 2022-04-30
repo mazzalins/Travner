@@ -36,7 +36,7 @@ struct EditProjectView: View {
                 TextField("Project name", text: $title.onChange(update))
                 TextField("Description of this project", text: $detail.onChange(update))
             }
-            
+
             Section(header: Text("Custom project color")) {
                 LazyVGrid(columns: colorColumns) {
                     ForEach(Project.colors, id: \.self, content: colorButton)
@@ -59,7 +59,12 @@ struct EditProjectView: View {
         .navigationTitle("Edit Project")
         .onDisappear(perform: dataController.save)
         .alert(isPresented: $showingDeleteConfirm) {
-            Alert(title: Text("Delete project?"), message: Text("Are you sure you want to delete this project? You will also delete all the items it contains."), primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
+            Alert(
+                title: Text("Delete project?"),
+                message: Text("Are you sure you want to delete this project? You will also delete all the items it contains."),
+                primaryButton: .default(Text("Delete"), action: delete),
+                secondaryButton: .cancel()
+            )
         }
     }
 

@@ -8,7 +8,20 @@
 import SwiftUI
 
 extension Project {
-    static let colors = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"]
+    static let colors = [
+        "Pink",
+        "Purple",
+        "Red",
+        "Orange",
+        "Gold",
+        "Green",
+        "Teal",
+        "Light Blue",
+        "Dark Blue",
+        "Midnight",
+        "Dark Gray",
+        "Gray"
+    ]
 
     var projectTitle: String {
         title ?? NSLocalizedString("New Project", comment: "Create a new project")
