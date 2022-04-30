@@ -59,7 +59,7 @@
 		8AAEBB84281995B7002A5B8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AAEBB8C2819DBC2002A5B8F /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		8AAEBB8E2819DCC4002A5B8F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		8AAEBB902819DD3B002A5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8AAEBB902819DD3B002A5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AAEBB912819DE19002A5B8F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
@@ -82,6 +82,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A7B2F0E281DAA5E005DE487 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AAEBB7F281995B1002A5B8F /* ContentView.swift */,
+				8AAEBB912819DE19002A5B8F /* HomeView.swift */,
+				8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */,
+				8A6040DA2819F72D00794895 /* EditItemView.swift */,
+				8A6040DC2819F81C00794895 /* ItemRowView.swift */,
+				8A6040E02819FFF700794895 /* ProjectHeaderView.swift */,
+				8A6040E4281A010400794895 /* EditProjectView.swift */,
+				8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */,
+				8AFF636A281BF0DC006587AD /* AwardsView.swift */,
+				8A882C9C281D7F14004AA220 /* ItemListView.swift */,
+				8A882C9E281D7FFA004AA220 /* ProjectSummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A7B2F0F281DAA72005DE487 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */,
+				8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */,
+				8AFF6368281BF0B8006587AD /* Award.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A7B2F10281DAA80005DE487 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AAEBB8E2819DCC4002A5B8F /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8A7B2F11281DAA9A005DE487 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A6040DE2819F8EC00794895 /* Binding-OnChange.swift */,
+				8AFF6360281BB632006587AD /* Sequence-Sorting.swift */,
+				8AFF6364281BF072006587AD /* Bundle-Decodable.swift */,
+				8A9019F4281C31B900490A76 /* Color-Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A7B2F12281DAAAA005DE487 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8A882C9A281D1059004AA220 /* Awards.json */,
+				8A882C92281D0D85004AA220 /* Localizable.strings */,
+				8A882C96281D0ED8004AA220 /* Localizable.stringsdict */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		8A7B2F13281DAABF005DE487 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8AAEBB902819DD3B002A5B8F /* Info.plist */,
+				8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		8AAEBB71281995B1002A5B8F = {
 			isa = PBXGroup;
 			children = (
@@ -101,31 +167,13 @@
 		8AAEBB7C281995B1002A5B8F /* Travner */ = {
 			isa = PBXGroup;
 			children = (
-				8AAEBB902819DD3B002A5B8F /* Info.plist */,
+				8A7B2F0F281DAA72005DE487 /* Models */,
+				8A7B2F0E281DAA5E005DE487 /* Views */,
+				8A7B2F10281DAA80005DE487 /* Controllers */,
+				8A7B2F11281DAA9A005DE487 /* Extensions */,
+				8A7B2F12281DAAAA005DE487 /* Localization */,
+				8A7B2F13281DAABF005DE487 /* Configuration */,
 				8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */,
-				8AAEBB7F281995B1002A5B8F /* ContentView.swift */,
-				8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */,
-				8AAEBB8E2819DCC4002A5B8F /* DataController.swift */,
-				8AAEBB912819DE19002A5B8F /* HomeView.swift */,
-				8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */,
-				8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */,
-				8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */,
-				8A6040DA2819F72D00794895 /* EditItemView.swift */,
-				8A6040DC2819F81C00794895 /* ItemRowView.swift */,
-				8A6040DE2819F8EC00794895 /* Binding-OnChange.swift */,
-				8A6040E02819FFF700794895 /* ProjectHeaderView.swift */,
-				8A6040E4281A010400794895 /* EditProjectView.swift */,
-				8AFF6360281BB632006587AD /* Sequence-Sorting.swift */,
-				8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */,
-				8AFF6364281BF072006587AD /* Bundle-Decodable.swift */,
-				8A882C9A281D1059004AA220 /* Awards.json */,
-				8AFF6368281BF0B8006587AD /* Award.swift */,
-				8AFF636A281BF0DC006587AD /* AwardsView.swift */,
-				8A9019F4281C31B900490A76 /* Color-Additions.swift */,
-				8A882C92281D0D85004AA220 /* Localizable.strings */,
-				8A882C96281D0ED8004AA220 /* Localizable.stringsdict */,
-				8A882C9C281D7F14004AA220 /* ItemListView.swift */,
-				8A882C9E281D7FFA004AA220 /* ProjectSummaryView.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8A6040E2281A00C500794895 /* Colors.xcassets */,
 				8AAEBB83281995B7002A5B8F /* Preview Content */,
@@ -420,7 +468,7 @@
 				DEVELOPMENT_TEAM = ZK5R34847G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Travner/Info.plist;
+				INFOPLIST_FILE = Travner/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,7 +498,7 @@
 				DEVELOPMENT_TEAM = ZK5R34847G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Travner/Info.plist;
+				INFOPLIST_FILE = Travner/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
