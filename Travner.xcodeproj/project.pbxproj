@@ -148,6 +148,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AAEBB88281995B7002A5B8F /* Build configuration list for PBXNativeTarget "Travner" */;
 			buildPhases = (
+				8A7B2F0D281DA1EA005DE487 /* SwiftLint */,
 				8AAEBB76281995B1002A5B8F /* Sources */,
 				8AAEBB77281995B1002A5B8F /* Frameworks */,
 				8AAEBB78281995B1002A5B8F /* Resources */,
@@ -210,6 +211,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A7B2F0D281DA1EA005DE487 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8AAEBB76281995B1002A5B8F /* Sources */ = {
