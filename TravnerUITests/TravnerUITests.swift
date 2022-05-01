@@ -82,4 +82,14 @@ class TravnerUITests: XCTestCase {
 
         XCTAssertTrue(app.buttons["New Item 2"].exists, "The new item name should be visible in the list.")
     }
+
+    func testAllAwardsShowLockedAlert() {
+        app.buttons["Awards"].tap()
+
+        for award in app.scrollViews.buttons.allElementsBoundByIndex {
+            award.tap()
+            XCTAssertTrue(app.alerts["Locked"].exists, "There should be a Locked alert showing for awards.")
+            app.buttons["OK"].tap()
+        }
+    }
 }
