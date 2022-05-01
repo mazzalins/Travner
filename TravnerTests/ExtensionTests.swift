@@ -5,6 +5,7 @@
 //  Created by Lorenzo Lins Mazzarotto on 01/05/22.
 //
 
+import SwiftUI
 import XCTest
 @testable import Travner
 
@@ -51,5 +52,25 @@ class ExtensionTests: XCTestCase {
         let data = bundle.decode([String: Int].self, from: "DecodableDictionary.json")
         XCTAssertEqual(data.count, 3, "There should be three items decoded from DecodableDictionary.json.")
         XCTAssertEqual(data["One"], 1, "The dictionary should contain Int to String mappings.")
+    }
+
+    func testBindingOnChange() {
+        var onChangeFunctionRun = false
+
+        func exampleFunctionToCall() {
+            onChangeFunctionRun = true
+        }
+
+        var storedValue = ""
+
+        let binding = Binding(
+            get: { storedValue },
+            set: { storedValue = $0 }
+        )
+
+        let changedBinding = binding.onChange(exampleFunctionToCall)
+        changedBinding.wrappedValue = "Test"
+
+        XCTAssertTrue(onChangeFunctionRun, "The onChange() function was not run.")
     }
 }
