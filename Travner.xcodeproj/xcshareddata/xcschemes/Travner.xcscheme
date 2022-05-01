@@ -49,6 +49,16 @@
                ReferencedContainer = "container:Travner.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8A948382281F2D2C003EA463"
+               BuildableName = "TravnerUITests.xctest"
+               BlueprintName = "TravnerUITests"
+               ReferencedContainer = "container:Travner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
