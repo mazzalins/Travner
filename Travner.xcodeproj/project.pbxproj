@@ -29,12 +29,23 @@
 		8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */; };
 		8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */; };
 		8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */; };
+		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AFF6361281BB632006587AD /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6360281BB632006587AD /* Sequence-Sorting.swift */; };
 		8AFF6363281BC0BF006587AD /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */; };
 		8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6364281BF072006587AD /* Bundle-Decodable.swift */; };
 		8AFF6369281BF0B8006587AD /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6368281BF0B8006587AD /* Award.swift */; };
 		8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF636A281BF0DC006587AD /* AwardsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AE0078E281E94850084A75F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AAEBB72281995B1002A5B8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AAEBB79281995B1002A5B8F;
+			remoteInfo = Travner;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8A6040DA2819F72D00794895 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
@@ -64,6 +75,8 @@
 		8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AFF6360281BB632006587AD /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		8AFF6364281BF072006587AD /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -73,6 +86,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		8AAEBB77281995B1002A5B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AE00787281E94850084A75F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -160,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				8AAEBB7C281995B1002A5B8F /* Travner */,
+				8AE0078B281E94850084A75F /* TravnerTests */,
 				8AAEBB7B281995B1002A5B8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				8AAEBB7A281995B1002A5B8F /* Travner.app */,
+				8AE0078A281E94850084A75F /* TravnerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +219,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8AE0078B281E94850084A75F /* TravnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AE0078C281E94850084A75F /* TravnerTests.swift */,
+			);
+			path = TravnerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +248,24 @@
 			productReference = 8AAEBB7A281995B1002A5B8F /* Travner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8AE00789281E94850084A75F /* TravnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AE00792281E94850084A75F /* Build configuration list for PBXNativeTarget "TravnerTests" */;
+			buildPhases = (
+				8AE00786281E94850084A75F /* Sources */,
+				8AE00787281E94850084A75F /* Frameworks */,
+				8AE00788281E94850084A75F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AE0078F281E94850084A75F /* PBXTargetDependency */,
+			);
+			name = TravnerTests;
+			productName = TravnerTests;
+			productReference = 8AE0078A281E94850084A75F /* TravnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +278,10 @@
 				TargetAttributes = {
 					8AAEBB79281995B1002A5B8F = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					8AE00789281E94850084A75F = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 8AAEBB79281995B1002A5B8F;
 					};
 				};
 			};
@@ -248,6 +300,7 @@
 			projectRoot = "";
 			targets = (
 				8AAEBB79281995B1002A5B8F /* Travner */,
+				8AE00789281E94850084A75F /* TravnerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +316,13 @@
 				8AAEBB85281995B7002A5B8F /* Preview Assets.xcassets in Resources */,
 				8AAEBB82281995B7002A5B8F /* Assets.xcassets in Resources */,
 				8A882C94281D0ED8004AA220 /* Localizable.stringsdict in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AE00788281E94850084A75F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +378,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AE00786281E94850084A75F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AE0078F281E94850084A75F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AAEBB79281995B1002A5B8F /* Travner */;
+			targetProxy = 8AE0078E281E94850084A75F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8A882C92281D0D85004AA220 /* Localizable.strings */ = {
@@ -525,6 +601,42 @@
 			};
 			name = Release;
 		};
+		8AE00790281E94850084A75F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZK5R34847G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazzalins.TravnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travner.app/Travner";
+			};
+			name = Debug;
+		};
+		8AE00791281E94850084A75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZK5R34847G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazzalins.TravnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travner.app/Travner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,6 +654,15 @@
 			buildConfigurations = (
 				8AAEBB89281995B7002A5B8F /* Debug */,
 				8AAEBB8A281995B7002A5B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AE00792281E94850084A75F /* Build configuration list for PBXNativeTarget "TravnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE00790281E94850084A75F /* Debug */,
+				8AE00791281E94850084A75F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
