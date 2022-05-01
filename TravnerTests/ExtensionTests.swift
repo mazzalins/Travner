@@ -55,6 +55,7 @@ class ExtensionTests: XCTestCase {
     }
 
     func testBindingOnChange() {
+        // Given
         var onChangeFunctionRun = false
 
         func exampleFunctionToCall() {
@@ -69,8 +70,11 @@ class ExtensionTests: XCTestCase {
         )
 
         let changedBinding = binding.onChange(exampleFunctionToCall)
+
+        // When
         changedBinding.wrappedValue = "Test"
 
+        // Then
         XCTAssertTrue(onChangeFunctionRun, "The onChange() function was not run.")
     }
 }
