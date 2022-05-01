@@ -15,6 +15,7 @@
 		8A6040E5281A010400794895 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040E4281A010400794895 /* EditProjectView.swift */; };
 		8A75A71C281F090100DC7666 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75A71B281F090100DC7666 /* ProjectTests.swift */; };
 		8A75A71E281F11D000DC7666 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75A71D281F11CF00DC7666 /* AwardTests.swift */; };
+		8A75A720281F162C00DC7666 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75A71F281F162C00DC7666 /* DevelopmentTests.swift */; };
 		8A882C90281D0D85004AA220 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C92281D0D85004AA220 /* Localizable.strings */; };
 		8A882C94281D0ED8004AA220 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C96281D0ED8004AA220 /* Localizable.stringsdict */; };
 		8A882C98281D1059004AA220 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C9A281D1059004AA220 /* Awards.json */; };
@@ -59,6 +60,7 @@
 		8A6040E4281A010400794895 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		8A75A71B281F090100DC7666 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		8A75A71D281F11CF00DC7666 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
+		8A75A71F281F162C00DC7666 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		8A882C91281D0D85004AA220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A882C93281D0D93004AA220 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8A882C95281D0ED8004AA220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				8AE00793281E99E30084A75F /* AssetTests.swift */,
 				8A75A71B281F090100DC7666 /* ProjectTests.swift */,
 				8A75A71D281F11CF00DC7666 /* AwardTests.swift */,
+				8A75A71F281F162C00DC7666 /* DevelopmentTests.swift */,
 			);
 			path = TravnerTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				8A75A71E281F11D000DC7666 /* AwardTests.swift in Sources */,
 				8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */,
 				8A75A71C281F090100DC7666 /* ProjectTests.swift in Sources */,
+				8A75A720281F162C00DC7666 /* DevelopmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
