@@ -17,6 +17,8 @@
 		8A75A71E281F11D000DC7666 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75A71D281F11CF00DC7666 /* AwardTests.swift */; };
 		8A75A720281F162C00DC7666 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75A71F281F162C00DC7666 /* DevelopmentTests.swift */; };
 		8A75A722281F1E0500DC7666 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75A721281F1E0500DC7666 /* ExtensionTests.swift */; };
+		8A75A725281F1FE500DC7666 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A75A724281F1FE500DC7666 /* DecodableDictionary.json */; };
+		8A75A727281F1FFB00DC7666 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A75A726281F1FFB00DC7666 /* DecodableString.json */; };
 		8A882C90281D0D85004AA220 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C92281D0D85004AA220 /* Localizable.strings */; };
 		8A882C94281D0ED8004AA220 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C96281D0ED8004AA220 /* Localizable.stringsdict */; };
 		8A882C98281D1059004AA220 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A882C9A281D1059004AA220 /* Awards.json */; };
@@ -63,6 +65,8 @@
 		8A75A71D281F11CF00DC7666 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 		8A75A71F281F162C00DC7666 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		8A75A721281F1E0500DC7666 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
+		8A75A724281F1FE500DC7666 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
+		8A75A726281F1FFB00DC7666 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		8A882C91281D0D85004AA220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A882C93281D0D93004AA220 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8A882C95281D0ED8004AA220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A75A723281F1F1D00DC7666 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				8A75A724281F1FE500DC7666 /* DecodableDictionary.json */,
+				8A75A726281F1FFB00DC7666 /* DecodableString.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		8A7B2F11281DAA9A005DE487 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +245,7 @@
 		8AE0078B281E94850084A75F /* TravnerTests */ = {
 			isa = PBXGroup;
 			children = (
+				8A75A723281F1F1D00DC7666 /* Fixtures */,
 				8AE0078C281E94850084A75F /* TravnerTests.swift */,
 				8AE00793281E99E30084A75F /* AssetTests.swift */,
 				8A75A71B281F090100DC7666 /* ProjectTests.swift */,
@@ -338,6 +352,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A75A727281F1FFB00DC7666 /* DecodableString.json in Resources */,
+				8A75A725281F1FE500DC7666 /* DecodableDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
