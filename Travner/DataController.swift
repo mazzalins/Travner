@@ -102,7 +102,17 @@ class DataController: ObservableObject {
         }
     }
 
-    func delete(_ object: NSManagedObject) {
+    func delete(_ object: Project) {
+        let id = object.objectID.uriRepresentation().absoluteString
+        CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+
+        container.viewContext.delete(object)
+    }
+
+    func delete(_ object: Item) {
+        let id = object.objectID.uriRepresentation().absoluteString
+        CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+
         container.viewContext.delete(object)
     }
 
