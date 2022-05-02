@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8A18162E2820599A00C7F55B /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18162D2820599A00C7F55B /* ProjectsViewModel.swift */; };
 		8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18162F2820767400C7F55B /* HomeViewModel.swift */; };
+		8A40285D28207B8A00A4BE99 /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40285C28207B8A00A4BE99 /* ItemRowViewModel.swift */; };
 		8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DA2819F72D00794895 /* EditItemView.swift */; };
 		8A6040DD2819F81C00794895 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DC2819F81C00794895 /* ItemRowView.swift */; };
 		8A6040DF2819F8EC00794895 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DE2819F8EC00794895 /* Binding-OnChange.swift */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		8A18162D2820599A00C7F55B /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		8A18162F2820767400C7F55B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8A40285C28207B8A00A4BE99 /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		8A6040DA2819F72D00794895 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		8A6040DC2819F81C00794895 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		8A6040DE2819F8EC00794895 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */,
 				8A6040E02819FFF700794895 /* ProjectHeaderView.swift */,
 				8A6040DC2819F81C00794895 /* ItemRowView.swift */,
+				8A40285C28207B8A00A4BE99 /* ItemRowViewModel.swift */,
 				8A6040E4281A010400794895 /* EditProjectView.swift */,
 				8A6040DA2819F72D00794895 /* EditItemView.swift */,
 			);
@@ -479,6 +482,7 @@
 				8A882C9D281D7F14004AA220 /* ItemListView.swift in Sources */,
 				8AAEBB922819DE19002A5B8F /* HomeView.swift in Sources */,
 				8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */,
+				8A40285D28207B8A00A4BE99 /* ItemRowViewModel.swift in Sources */,
 				8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */,
 				8A18162E2820599A00C7F55B /* ProjectsViewModel.swift in Sources */,
 				8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */,
