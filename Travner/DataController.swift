@@ -5,6 +5,7 @@
 //  Created by Lorenzo Lins Mazzarotto on 27/04/22.
 //
 
+import CoreSpotlight
 import CoreData
 import SwiftUI
 
@@ -139,5 +140,24 @@ class DataController: ObservableObject {
             // fatalError("Unknown award criterion \(award.criterion).")
             return false
         }
+    }
+
+    func update(_ item: Item) {
+        let itemID = item.objectID.uriRepresentation().absoluteString
+        let projectID = item.project?.objectID.uriRepresentation().absoluteString
+
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = item.title
+        attributeSet.contentDescription = item.detail
+
+        let searchableItem = CSSearchableItem(
+            uniqueIdentifier: itemID,
+            domainIdentifier: projectID,
+            attributeSet: attributeSet
+        )
+
+        CSSearchableIndex.default().indexSearchableItems([searchableItem])
+
+        save()
     }
 }
