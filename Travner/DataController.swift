@@ -7,6 +7,7 @@
 
 import CoreSpotlight
 import CoreData
+import StoreKit
 import SwiftUI
 import UserNotifications
 
@@ -52,12 +53,12 @@ class DataController: ObservableObject {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
 
-#if DEBUG
+            #if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
                 self.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
-#endif
+            #endif
         }
     }
 
@@ -262,6 +263,17 @@ class DataController: ObservableObject {
                     completion(false)
                 }
             }
+        }
+    }
+
+    func appLaunched() {
+        guard count(for: Project.fetchRequest()) >= 5 else { return }
+
+        let allScenes = UIApplication.shared.connectedScenes
+        let scene = allScenes.first { $0.activationState == .foregroundActive }
+
+        if let windowScene = scene as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: windowScene)
         }
     }
 }

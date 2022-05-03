@@ -34,6 +34,7 @@ struct TravnerApp: App {
                     NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
                     perform: save
                 )
+                .onAppear(perform: dataController.appLaunched)
         }
     }
 
