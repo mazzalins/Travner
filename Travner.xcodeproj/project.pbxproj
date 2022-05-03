@@ -43,6 +43,10 @@
 		8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
+		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
+		8AFF01F12821A038001FAC18 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01F02821A038001FAC18 /* PurchaseButton.swift */; };
+		8AFF01F32821A054001FAC18 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01F22821A054001FAC18 /* ProductView.swift */; };
+		8AFF01F52821A095001FAC18 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01F42821A095001FAC18 /* UnlockView.swift */; };
 		8AFF6361281BB632006587AD /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6360281BB632006587AD /* Sequence-Sorting.swift */; };
 		8AFF6363281BC0BF006587AD /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */; };
 		8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6364281BF072006587AD /* Bundle-Decodable.swift */; };
@@ -112,6 +116,10 @@
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
+		8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
+		8AFF01F02821A038001FAC18 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		8AFF01F22821A054001FAC18 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		8AFF01F42821A095001FAC18 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		8AFF6360281BB632006587AD /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		8AFF6362281BC0BF006587AD /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		8AFF6364281BF072006587AD /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -263,6 +271,10 @@
 			children = (
 				8A96C0B728218D7B00336052 /* UnlockManager.swift */,
 				8A96C0B928218E1E00336052 /* Configuration.storekit */,
+				8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */,
+				8AFF01F02821A038001FAC18 /* PurchaseButton.swift */,
+				8AFF01F22821A054001FAC18 /* ProductView.swift */,
+				8AFF01F42821A095001FAC18 /* UnlockView.swift */,
 				8A7B2F14281DABAF005DE487 /* Activities */,
 				8A7B2F11281DAA9A005DE487 /* Extensions */,
 				8A7B2F12281DAAAA005DE487 /* Localization */,
@@ -469,7 +481,9 @@
 			files = (
 				8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */,
 				8A882C9F281D7FFA004AA220 /* ProjectSummaryView.swift in Sources */,
+				8AFF01F12821A038001FAC18 /* PurchaseButton.swift in Sources */,
 				8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */,
+				8AFF01F32821A054001FAC18 /* ProductView.swift in Sources */,
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */,
@@ -481,6 +495,7 @@
 				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
 				8AFF6369281BF0B8006587AD /* Award.swift in Sources */,
 				8AFF6363281BC0BF006587AD /* SelectSomethingView.swift in Sources */,
+				8AFF01F52821A095001FAC18 /* UnlockView.swift in Sources */,
 				8A6040DD2819F81C00794895 /* ItemRowView.swift in Sources */,
 				8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */,
 				8A6040DF2819F8EC00794895 /* Binding-OnChange.swift in Sources */,
@@ -490,6 +505,7 @@
 				8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */,
 				8A40285D28207B8A00A4BE99 /* ItemRowViewModel.swift in Sources */,
 				8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */,
+				8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */,
 				8A18162E2820599A00C7F55B /* ProjectsViewModel.swift in Sources */,
 				8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */,
 			);
