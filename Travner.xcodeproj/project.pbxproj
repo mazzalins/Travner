@@ -170,6 +170,7 @@
 				8A9019F4281C31B900490A76 /* Color-Additions.swift */,
 				8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */,
 				8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */,
+				8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +189,7 @@
 			children = (
 				8AAEBB902819DD3B002A5B8F /* Info.plist */,
 				8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */,
+				8A96C0B928218E1E00336052 /* Configuration.storekit */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -198,6 +200,7 @@
 				8A7B2F15281DABB6005DE487 /* Home */,
 				8A7B2F16281DABBA005DE487 /* Projects */,
 				8A7B2F17281DABBF005DE487 /* Awards */,
+				8AFF01F62821A5F4001FAC18 /* Unlock */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -269,12 +272,6 @@
 		8AAEBB7C281995B1002A5B8F /* Travner */ = {
 			isa = PBXGroup;
 			children = (
-				8A96C0B728218D7B00336052 /* UnlockManager.swift */,
-				8A96C0B928218E1E00336052 /* Configuration.storekit */,
-				8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */,
-				8AFF01F02821A038001FAC18 /* PurchaseButton.swift */,
-				8AFF01F22821A054001FAC18 /* ProductView.swift */,
-				8AFF01F42821A095001FAC18 /* UnlockView.swift */,
 				8A7B2F14281DABAF005DE487 /* Activities */,
 				8A7B2F11281DAA9A005DE487 /* Extensions */,
 				8A7B2F12281DAAAA005DE487 /* Localization */,
@@ -310,6 +307,17 @@
 				8A75A728281F22DB00DC7666 /* PerformanceTests.swift */,
 			);
 			path = TravnerTests;
+			sourceTree = "<group>";
+		};
+		8AFF01F62821A5F4001FAC18 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				8AFF01F22821A054001FAC18 /* ProductView.swift */,
+				8AFF01F02821A038001FAC18 /* PurchaseButton.swift */,
+				8A96C0B728218D7B00336052 /* UnlockManager.swift */,
+				8AFF01F42821A095001FAC18 /* UnlockView.swift */,
+			);
+			path = Unlock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
