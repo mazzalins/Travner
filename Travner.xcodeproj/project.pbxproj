@@ -30,6 +30,7 @@
 		8A882C9F281D7FFA004AA220 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A882C9E281D7FFA004AA220 /* ProjectSummaryView.swift */; };
 		8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9019F4281C31B900490A76 /* Color-Additions.swift */; };
 		8A948386281F2D2C003EA463 /* TravnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A948385281F2D2C003EA463 /* TravnerUITests.swift */; };
+		8A96C0B828218D7B00336052 /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96C0B728218D7B00336052 /* UnlockManager.swift */; };
 		8AAEBB7E281995B1002A5B8F /* TravnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */; };
 		8AAEBB80281995B1002A5B8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB7F281995B1002A5B8F /* ContentView.swift */; };
 		8AAEBB82281995B7002A5B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEBB81281995B7002A5B8F /* Assets.xcassets */; };
@@ -94,6 +95,8 @@
 		8A9019F4281C31B900490A76 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		8A948383281F2D2C003EA463 /* TravnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A948385281F2D2C003EA463 /* TravnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerUITests.swift; sourceTree = "<group>"; };
+		8A96C0B728218D7B00336052 /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
+		8A96C0B928218E1E00336052 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		8AAEBB7A281995B1002A5B8F /* Travner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAEBB7D281995B1002A5B8F /* TravnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerApp.swift; sourceTree = "<group>"; };
 		8AAEBB7F281995B1002A5B8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 		8AAEBB7C281995B1002A5B8F /* Travner */ = {
 			isa = PBXGroup;
 			children = (
+				8A96C0B728218D7B00336052 /* UnlockManager.swift */,
+				8A96C0B928218E1E00336052 /* Configuration.storekit */,
 				8A7B2F14281DABAF005DE487 /* Activities */,
 				8A7B2F11281DAA9A005DE487 /* Extensions */,
 				8A7B2F12281DAAAA005DE487 /* Localization */,
@@ -468,6 +473,7 @@
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */,
+				8A96C0B828218D7B00336052 /* UnlockManager.swift in Sources */,
 				8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */,
 				8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */,
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
