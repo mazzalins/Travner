@@ -53,12 +53,12 @@ class DataController: ObservableObject {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
 
-            #if DEBUG
+#if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
                 self.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
-            #endif
+#endif
         }
     }
 
@@ -274,6 +274,20 @@ class DataController: ObservableObject {
 
         if let windowScene = scene as? UIWindowScene {
             SKStoreReviewController.requestReview(in: windowScene)
+        }
+    }
+
+    @discardableResult func addProject() -> Bool {
+        let canCreate = fullVersionUnlocked || count(for: Project.fetchRequest()) < 3
+
+        if canCreate {
+            let project = Project(context: container.viewContext)
+            project.closed = false
+            project.creationDate = Date()
+            save()
+            return true
+        } else {
+            return false
         }
     }
 }
