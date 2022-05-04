@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct TravnerApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var dataController: DataController
     @StateObject var unlockManager: UnlockManager
 
