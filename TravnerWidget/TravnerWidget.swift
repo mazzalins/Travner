@@ -54,8 +54,14 @@ struct TravnerWidgetEntryView: View {
 }
 
 @main
-struct TravnerWidget: Widget {
-    let kind: String = "TravnerWidget"
+struct TravnerWidgets: WidgetBundle {
+    var body: some Widget {
+        SimpleTravnerWidget()
+    }
+}
+
+struct SimpleTravnerWidget: Widget {
+    let kind: String = "SimpleTravnerWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
