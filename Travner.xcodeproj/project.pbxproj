@@ -262,10 +262,10 @@
 		8A7B2F13281DAABF005DE487 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				8A2DE57B28235A0100CCFF42 /* Travner.entitlements */,
 				8AAEBB902819DD3B002A5B8F /* Info.plist */,
 				8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */,
 				8A96C0B928218E1E00336052 /* Configuration.storekit */,
+				8A2DE57B28235A0100CCFF42 /* Travner.entitlements */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
