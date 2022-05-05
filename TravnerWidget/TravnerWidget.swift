@@ -26,7 +26,7 @@ struct Provider: TimelineProvider {
 
     func loadItems() -> [Item] {
         let dataController = DataController()
-        let itemRequest = dataController.fetchRequestForTopItems(count: 1)
+        let itemRequest = dataController.fetchRequestForTopItems(count: 5)
         return dataController.results(for: itemRequest)
     }
 }
@@ -53,10 +53,19 @@ struct TravnerWidgetEntryView: View {
     }
 }
 
+struct TravnerWidgetMultipleEntryView: View {
+    var entry: Provider.Entry
+
+    var body: some View {
+        Text("Hello, world!")
+    }
+}
+
 @main
 struct TravnerWidgets: WidgetBundle {
     var body: some Widget {
         SimpleTravnerWidget()
+        ComplexTravnerWidget()
     }
 }
 
@@ -70,6 +79,18 @@ struct SimpleTravnerWidget: Widget {
         .configurationDisplayName("Up next…")
         .description("Your #1 top-priority item.")
         .supportedFamilies([.systemSmall])
+    }
+}
+
+struct ComplexTravnerWidget: Widget {
+    let kind: String = "ComplexTravnerWidget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            TravnerWidgetMultipleEntryView(entry: entry)
+        }
+        .configurationDisplayName("Up next…")
+        .description("Your most important items.")
     }
 }
 

@@ -20,6 +20,9 @@
 		8A2DE576282358F500CCFF42 /* DataController-Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE575282358F500CCFF42 /* DataController-Reminders.swift */; };
 		8A2DE5782823592100CCFF42 /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE5772823592100CCFF42 /* DataController-Awards.swift */; };
 		8A2DE57A2823596700CCFF42 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE5792823596700CCFF42 /* DataController-StoreKit.swift */; };
+		8A3BD8D028237302009481FC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6040E2281A00C500794895 /* Colors.xcassets */; };
+		8A3BD8D12823730A009481FC /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */; };
+		8A3BD8D228237312009481FC /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF6360281BB632006587AD /* Sequence-Sorting.swift */; };
 		8A40285D28207B8A00A4BE99 /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40285C28207B8A00A4BE99 /* ItemRowViewModel.swift */; };
 		8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DA2819F72D00794895 /* EditItemView.swift */; };
 		8A6040DD2819F81C00794895 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DC2819F81C00794895 /* ItemRowView.swift */; };
@@ -535,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2DE5692823582700CCFF42 /* Assets.xcassets in Resources */,
+				8A3BD8D028237302009481FC /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,7 +602,9 @@
 				8A2DE572282358C700CCFF42 /* Main.xcdatamodeld in Sources */,
 				8A2DE574282358D600CCFF42 /* DataController.swift in Sources */,
 				8A2DE5672823582400CCFF42 /* TravnerWidget.swift in Sources */,
+				8A3BD8D228237312009481FC /* Sequence-Sorting.swift in Sources */,
 				8A2DE573282358D300CCFF42 /* Item-CoreDataHelpers.swift in Sources */,
+				8A3BD8D12823730A009481FC /* Project-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
