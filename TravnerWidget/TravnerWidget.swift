@@ -10,39 +10,46 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), items: [Item.example])
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        let entry = SimpleEntry(date: Date())
+        let entry = SimpleEntry(date: Date(), items: loadItems())
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let entry = SimpleEntry(date: Date(), items: loadItems())
+        let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
+    }
+
+    func loadItems() -> [Item] {
+        let dataController = DataController()
+        let itemRequest = dataController.fetchRequestForTopItems(count: 1)
+        return dataController.results(for: itemRequest)
     }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    let items: [Item]
 }
 
 struct TravnerWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack {
+            Text("Up next…")
+                .font(.title)
+
+            if let item = entry.items.first {
+                Text(item.itemTitle)
+            } else {
+                Text("Nothing!")
+            }
+        }
     }
 }
 
@@ -61,7 +68,7 @@ struct TravnerWidget: Widget {
 
 struct TravnerWidget_Previews: PreviewProvider {
     static var previews: some View {
-        TravnerWidgetEntryView(entry: SimpleEntry(date: Date()))
+        TravnerWidgetEntryView(entry: SimpleEntry(date: Date(), items: [Item.example]))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
