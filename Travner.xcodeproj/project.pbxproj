@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		8A18162E2820599A00C7F55B /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18162D2820599A00C7F55B /* ProjectsViewModel.swift */; };
 		8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18162F2820767400C7F55B /* HomeViewModel.swift */; };
+		8A2DE5622823582400CCFF42 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2DE5612823582400CCFF42 /* WidgetKit.framework */; };
+		8A2DE5642823582400CCFF42 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2DE5632823582400CCFF42 /* SwiftUI.framework */; };
+		8A2DE5672823582400CCFF42 /* TravnerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE5662823582400CCFF42 /* TravnerWidget.swift */; };
+		8A2DE5692823582700CCFF42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2DE5682823582700CCFF42 /* Assets.xcassets */; };
+		8A2DE56D2823582700CCFF42 /* TravnerWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A2DE55F2823582400CCFF42 /* TravnerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A2DE572282358C700CCFF42 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB8B2819DBC2002A5B8F /* Main.xcdatamodeld */; };
+		8A2DE573282358D300CCFF42 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */; };
+		8A2DE574282358D600CCFF42 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB8E2819DCC4002A5B8F /* DataController.swift */; };
+		8A2DE576282358F500CCFF42 /* DataController-Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE575282358F500CCFF42 /* DataController-Reminders.swift */; };
+		8A2DE5782823592100CCFF42 /* DataController-Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE5772823592100CCFF42 /* DataController-Awards.swift */; };
+		8A2DE57A2823596700CCFF42 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DE5792823596700CCFF42 /* DataController-StoreKit.swift */; };
 		8A40285D28207B8A00A4BE99 /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40285C28207B8A00A4BE99 /* ItemRowViewModel.swift */; };
 		8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DA2819F72D00794895 /* EditItemView.swift */; };
 		8A6040DD2819F81C00794895 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6040DC2819F81C00794895 /* ItemRowView.swift */; };
@@ -57,6 +68,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8A2DE56B2823582700CCFF42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AAEBB72281995B1002A5B8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A2DE55E2823582400CCFF42;
+			remoteInfo = TravnerWidgetExtension;
+		};
 		8A948389281F2D2C003EA463 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8AAEBB72281995B1002A5B8F /* Project object */;
@@ -73,9 +91,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8A2DE56E2823582700CCFF42 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A2DE56D2823582700CCFF42 /* TravnerWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8A18162D2820599A00C7F55B /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		8A18162F2820767400C7F55B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8A2DE55F2823582400CCFF42 /* TravnerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TravnerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A2DE5612823582400CCFF42 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		8A2DE5632823582400CCFF42 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		8A2DE5662823582400CCFF42 /* TravnerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerWidget.swift; sourceTree = "<group>"; };
+		8A2DE5682823582700CCFF42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A2DE56A2823582700CCFF42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A2DE575282358F500CCFF42 /* DataController-Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Reminders.swift"; sourceTree = "<group>"; };
+		8A2DE5772823592100CCFF42 /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
+		8A2DE5792823596700CCFF42 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 		8A40285C28207B8A00A4BE99 /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		8A6040DA2819F72D00794895 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		8A6040DC2819F81C00794895 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
@@ -132,6 +173,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8A2DE55C2823582400CCFF42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2DE5642823582400CCFF42 /* SwiftUI.framework in Frameworks */,
+				8A2DE5622823582400CCFF42 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A948380281F2D2C003EA463 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +206,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A2DE5602823582400CCFF42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A2DE5612823582400CCFF42 /* WidgetKit.framework */,
+				8A2DE5632823582400CCFF42 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A2DE5652823582400CCFF42 /* TravnerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				8A2DE5662823582400CCFF42 /* TravnerWidget.swift */,
+				8A2DE5682823582700CCFF42 /* Assets.xcassets */,
+				8A2DE56A2823582700CCFF42 /* Info.plist */,
+			);
+			path = TravnerWidget;
+			sourceTree = "<group>";
+		};
 		8A75A723281F1F1D00DC7666 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +328,8 @@
 				8AAEBB7C281995B1002A5B8F /* Travner */,
 				8AE0078B281E94850084A75F /* TravnerTests */,
 				8A948384281F2D2C003EA463 /* TravnerUITests */,
+				8A2DE5652823582400CCFF42 /* TravnerWidget */,
+				8A2DE5602823582400CCFF42 /* Frameworks */,
 				8AAEBB7B281995B1002A5B8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -269,6 +340,7 @@
 				8AAEBB7A281995B1002A5B8F /* Travner.app */,
 				8AE0078A281E94850084A75F /* TravnerTests.xctest */,
 				8A948383281F2D2C003EA463 /* TravnerUITests.xctest */,
+				8A2DE55F2823582400CCFF42 /* TravnerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +356,9 @@
 				8A8116502822FF78005C9CB1 /* AppDelegate.swift */,
 				8A8116522822FF83005C9CB1 /* SceneDelegate.swift */,
 				8AAEBB8E2819DCC4002A5B8F /* DataController.swift */,
+				8A2DE575282358F500CCFF42 /* DataController-Reminders.swift */,
+				8A2DE5772823592100CCFF42 /* DataController-Awards.swift */,
+				8A2DE5792823596700CCFF42 /* DataController-StoreKit.swift */,
 				8AAEBB7F281995B1002A5B8F /* ContentView.swift */,
 				8AAEBB81281995B7002A5B8F /* Assets.xcassets */,
 				8A6040E2281A00C500794895 /* Colors.xcassets */,
@@ -329,6 +404,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A2DE55E2823582400CCFF42 /* TravnerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A2DE5712823582700CCFF42 /* Build configuration list for PBXNativeTarget "TravnerWidgetExtension" */;
+			buildPhases = (
+				8A2DE55B2823582400CCFF42 /* Sources */,
+				8A2DE55C2823582400CCFF42 /* Frameworks */,
+				8A2DE55D2823582400CCFF42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravnerWidgetExtension;
+			productName = TravnerWidgetExtension;
+			productReference = 8A2DE55F2823582400CCFF42 /* TravnerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8A948382281F2D2C003EA463 /* TravnerUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A94838D281F2D2C003EA463 /* Build configuration list for PBXNativeTarget "TravnerUITests" */;
@@ -355,10 +447,12 @@
 				8AAEBB76281995B1002A5B8F /* Sources */,
 				8AAEBB77281995B1002A5B8F /* Frameworks */,
 				8AAEBB78281995B1002A5B8F /* Resources */,
+				8A2DE56E2823582700CCFF42 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8A2DE56C2823582700CCFF42 /* PBXTargetDependency */,
 			);
 			name = Travner;
 			productName = Travner;
@@ -393,6 +487,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					8A2DE55E2823582400CCFF42 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					8A948382281F2D2C003EA463 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = 8AAEBB79281995B1002A5B8F;
@@ -423,11 +520,20 @@
 				8AAEBB79281995B1002A5B8F /* Travner */,
 				8AE00789281E94850084A75F /* TravnerTests */,
 				8A948382281F2D2C003EA463 /* TravnerUITests */,
+				8A2DE55E2823582400CCFF42 /* TravnerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A2DE55D2823582400CCFF42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2DE5692823582700CCFF42 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A948381281F2D2C003EA463 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,6 +587,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A2DE55B2823582400CCFF42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2DE572282358C700CCFF42 /* Main.xcdatamodeld in Sources */,
+				8A2DE574282358D600CCFF42 /* DataController.swift in Sources */,
+				8A2DE5672823582400CCFF42 /* TravnerWidget.swift in Sources */,
+				8A2DE573282358D300CCFF42 /* Item-CoreDataHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A94837F281F2D2C003EA463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,16 +613,19 @@
 				8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */,
 				8A882C9F281D7FFA004AA220 /* ProjectSummaryView.swift in Sources */,
 				8A8116532822FF83005C9CB1 /* SceneDelegate.swift in Sources */,
+				8A2DE5782823592100CCFF42 /* DataController-Awards.swift in Sources */,
 				8AFF01F12821A038001FAC18 /* PurchaseButton.swift in Sources */,
 				8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */,
 				8AFF01F32821A054001FAC18 /* ProductView.swift in Sources */,
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */,
+				8A2DE57A2823596700CCFF42 /* DataController-StoreKit.swift in Sources */,
 				8A96C0B828218D7B00336052 /* UnlockManager.swift in Sources */,
 				8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */,
 				8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */,
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
+				8A2DE576282358F500CCFF42 /* DataController-Reminders.swift in Sources */,
 				8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */,
 				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
 				8AFF6369281BF0B8006587AD /* Award.swift in Sources */,
@@ -544,6 +664,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8A2DE56C2823582700CCFF42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A2DE55E2823582400CCFF42 /* TravnerWidgetExtension */;
+			targetProxy = 8A2DE56B2823582700CCFF42 /* PBXContainerItemProxy */;
+		};
 		8A94838A281F2D2C003EA463 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AAEBB79281995B1002A5B8F /* Travner */;
@@ -587,6 +712,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8A2DE56F2823582700CCFF42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZK5R34847G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TravnerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TravnerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazzalins.Travner.TravnerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A2DE5702823582700CCFF42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZK5R34847G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TravnerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TravnerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazzalins.Travner.TravnerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8A94838B281F2D2C003EA463 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -738,6 +917,7 @@
 		8AAEBB89281995B7002A5B8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -768,6 +948,7 @@
 		8AAEBB8A281995B7002A5B8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -834,6 +1015,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A2DE5712823582700CCFF42 /* Build configuration list for PBXNativeTarget "TravnerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2DE56F2823582700CCFF42 /* Debug */,
+				8A2DE5702823582700CCFF42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A94838D281F2D2C003EA463 /* Build configuration list for PBXNativeTarget "TravnerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
