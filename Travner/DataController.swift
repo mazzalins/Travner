@@ -58,12 +58,14 @@ class DataController: ObservableObject {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
 
-#if DEBUG
+            self.container.viewContext.automaticallyMergesChangesFromParent = true
+
+            #if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
                 self.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
-#endif
+            #endif
         }
     }
 
