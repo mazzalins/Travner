@@ -17,7 +17,7 @@ struct UnlockView: View {
             switch unlockManager.requestState {
             case .loaded(let product):
                 ProductView(product: product)
-            case .failed:
+            case .failed(_):
                 Text("Sorry, there was an error loading the store. Please try again later.")
             case .loading:
                 ProgressView("Loading…")
