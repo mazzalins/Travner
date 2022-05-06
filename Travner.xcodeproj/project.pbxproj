@@ -63,6 +63,7 @@
 		8AC9FDA92825D3BC00D6AFC4 /* SharedProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */; };
 		8AC9FDAB2825D3D200D6AFC4 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */; };
 		8AC9FDAD2825D3E400D6AFC4 /* LoadStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */; };
+		8AC9FDB02825D4E600D6AFC4 /* SharedProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -175,6 +176,7 @@
 		8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProject.swift; sourceTree = "<group>"; };
 		8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
 		8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStates.swift; sourceTree = "<group>"; };
+		8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProjectsView.swift; sourceTree = "<group>"; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */,
 				8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */,
 				8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */,
+				8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */,
 				8AFF01F32821A054001FAC18 /* ProductView.swift in Sources */,
 				8AC9FDAD2825D3E400D6AFC4 /* LoadStates.swift in Sources */,
+				8AC9FDB02825D4E600D6AFC4 /* SharedProjectsView.swift in Sources */,
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */,
