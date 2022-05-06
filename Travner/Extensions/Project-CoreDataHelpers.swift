@@ -5,6 +5,7 @@
 //  Created by Lorenzo Lins Mazzarotto on 27/04/22.
 //
 
+import CloudKit
 import SwiftUI
 
 extension Project {
@@ -95,5 +96,29 @@ extension Project {
         case .optimized:
             return projectItemsDefaultSorted
         }
+    }
+
+    func prepareCloudRecords() -> [CKRecord] {
+        let parentName = objectID.uriRepresentation().absoluteString
+        let parentID = CKRecord.ID(recordName: parentName)
+        let parent = CKRecord(recordType: "Project", recordID: parentID)
+        parent["title"] = projectTitle
+        parent["detail"] = projectDetail
+        parent["owner"] = "mazzalins"
+        parent["closed"] = closed
+
+        var records = projectItemsDefaultSorted.map { item -> CKRecord in
+            let childName = item.objectID.uriRepresentation().absoluteString
+            let childID = CKRecord.ID(recordName: childName)
+            let child = CKRecord(recordType: "Item", recordID: childID)
+            child["title"] = item.itemTitle
+            child["detail"] = item.itemDetail
+            child["completed"] = item.completed
+            child["project"] = CKRecord.Reference(recordID: parentID, action: .deleteSelf)
+            return child
+        }
+
+        records.append(parent)
+        return records
     }
 }
