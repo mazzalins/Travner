@@ -64,6 +64,7 @@
 		8AC9FDAB2825D3D200D6AFC4 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */; };
 		8AC9FDAD2825D3E400D6AFC4 /* LoadStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */; };
 		8AC9FDB02825D4E600D6AFC4 /* SharedProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */; };
+		8AC9FDB22825D77700D6AFC4 /* SharedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -177,6 +178,7 @@
 		8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
 		8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStates.swift; sourceTree = "<group>"; };
 		8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProjectsView.swift; sourceTree = "<group>"; };
+		8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemsView.swift; sourceTree = "<group>"; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */,
 				8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */,
 				8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */,
+				8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
 				8AC9FDA92825D3BC00D6AFC4 /* SharedProject.swift in Sources */,
 				8A2DE576282358F500CCFF42 /* DataController-Reminders.swift in Sources */,
+				8AC9FDB22825D77700D6AFC4 /* SharedItemsView.swift in Sources */,
 				8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */,
 				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
 				8AFF6369281BF0B8006587AD /* Award.swift in Sources */,
