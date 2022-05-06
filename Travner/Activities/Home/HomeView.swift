@@ -55,7 +55,8 @@ struct HomeView: View {
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
             .toolbar {
-                Button("Add Data", action: viewModel.addSampleData)
+//                Button("Add Data", action: viewModel.addSampleData)
+                Button("Delete all", action: viewModel.dataController.deleteAll)
             }
             .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
         }
