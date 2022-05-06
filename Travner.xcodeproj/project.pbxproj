@@ -60,6 +60,9 @@
 		8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */; };
 		8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */; };
 		8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */; };
+		8AC9FDA92825D3BC00D6AFC4 /* SharedProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */; };
+		8AC9FDAB2825D3D200D6AFC4 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */; };
+		8AC9FDAD2825D3E400D6AFC4 /* LoadStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -169,6 +172,9 @@
 		8AAEBB932819DFE8002A5B8F /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		8AAEBB952819E097002A5B8F /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		8AAEBB972819E489002A5B8F /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProject.swift; sourceTree = "<group>"; };
+		8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
+		8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStates.swift; sourceTree = "<group>"; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -289,6 +295,7 @@
 				8A7B2F16281DABBA005DE487 /* Projects */,
 				8A7B2F17281DABBF005DE487 /* Awards */,
 				8AFF01F62821A5F4001FAC18 /* Unlock */,
+				8AC9FDAE2825D40300D6AFC4 /* Community */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -389,6 +396,16 @@
 				8AAEBB84281995B7002A5B8F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8AC9FDAE2825D40300D6AFC4 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9FDAC2825D3E400D6AFC4 /* LoadStates.swift */,
+				8AC9FDAA2825D3D200D6AFC4 /* SharedItem.swift */,
+				8AC9FDA82825D3BC00D6AFC4 /* SharedProject.swift */,
+			);
+			path = Community;
 			sourceTree = "<group>";
 		};
 		8AE0078B281E94850084A75F /* TravnerTests */ = {
@@ -637,8 +654,10 @@
 				8A8116532822FF83005C9CB1 /* SceneDelegate.swift in Sources */,
 				8A2DE5782823592100CCFF42 /* DataController-Awards.swift in Sources */,
 				8AFF01F12821A038001FAC18 /* PurchaseButton.swift in Sources */,
+				8AC9FDAB2825D3D200D6AFC4 /* SharedItem.swift in Sources */,
 				8A6040E12819FFF700794895 /* ProjectHeaderView.swift in Sources */,
 				8AFF01F32821A054001FAC18 /* ProductView.swift in Sources */,
+				8AC9FDAD2825D3E400D6AFC4 /* LoadStates.swift in Sources */,
 				8AFF636B281BF0DC006587AD /* AwardsView.swift in Sources */,
 				8AAEBB8D2819DBC2002A5B8F /* Main.xcdatamodeld in Sources */,
 				8A1816302820767400C7F55B /* HomeViewModel.swift in Sources */,
@@ -647,6 +666,7 @@
 				8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */,
 				8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */,
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
+				8AC9FDA92825D3BC00D6AFC4 /* SharedProject.swift in Sources */,
 				8A2DE576282358F500CCFF42 /* DataController-Reminders.swift in Sources */,
 				8AFF6365281BF072006587AD /* Bundle-Decodable.swift in Sources */,
 				8AAEBB8F2819DCC4002A5B8F /* DataController.swift in Sources */,
