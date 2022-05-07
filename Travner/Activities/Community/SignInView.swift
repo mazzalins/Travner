@@ -86,7 +86,7 @@ struct SignInView: View {
             }
 
             status = .failure(nil)
-            
+
         case .failure(let error):
             if let error = error as? ASAuthorizationError {
                 if error.errorCode == ASAuthorizationError.canceled.rawValue {
