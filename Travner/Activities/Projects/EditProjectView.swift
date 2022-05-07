@@ -10,6 +10,10 @@ import CoreHaptics
 import SwiftUI
 
 struct EditProjectView: View {
+    enum CloudStatus {
+        case checking, exists, absent
+    }
+
     @ObservedObject var project: Project
 
     @EnvironmentObject var dataController: DataController
@@ -29,6 +33,8 @@ struct EditProjectView: View {
 
     @AppStorage("username") var username: String?
     @State private var showingSignIn = false
+
+    @State private var cloudStatus = CloudStatus.checking
 
     let colorColumns = [
         GridItem(.adaptive(minimum: 44))
@@ -228,12 +234,40 @@ struct EditProjectView: View {
                 if let error = error {
                     print("Error: \(error.localizedDescription)")
                 }
+
+                updateCloudStatus()
             }
+
+            cloudStatus = .checking
 
             CKContainer.default().publicCloudDatabase.add(operation)
         } else {
             showingSignIn = true
         }
+    }
+
+    func updateCloudStatus() {
+        project.checkCloudStatus { exists in
+            if exists {
+                cloudStatus = .exists
+            } else {
+                cloudStatus = .absent
+            }
+        }
+    }
+
+    func removeFromCloud() {
+        let name = project.objectID.uriRepresentation().absoluteString
+        let id = CKRecord.ID(recordName: name)
+
+        let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [id])
+
+        operation.modifyRecordsCompletionBlock = { _, _, _ in
+            updateCloudStatus()
+        }
+
+        cloudStatus = .checking
+        CKContainer.default().publicCloudDatabase.add(operation)
     }
 }
 
