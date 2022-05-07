@@ -67,6 +67,7 @@
 		8AC9FDB22825D77700D6AFC4 /* SharedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */; };
 		8AC9FDB42825E84600D6AFC4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB32825E84600D6AFC4 /* SignInView.swift */; };
 		8AC9FDB62826007700D6AFC4 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */; };
+		8AC9FDB828260DEA00D6AFC4 /* Error-CloudKitMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -183,6 +184,7 @@
 		8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemsView.swift; sourceTree = "<group>"; };
 		8AC9FDB32825E84600D6AFC4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error-CloudKitMessages.swift"; sourceTree = "<group>"; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6040DE2819F8EC00794895 /* Binding-OnChange.swift */,
+				8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */,
 				8AFF6360281BB632006587AD /* Sequence-Sorting.swift */,
 				8AFF6364281BF072006587AD /* Bundle-Decodable.swift */,
 				8A9019F4281C31B900490A76 /* Color-Additions.swift */,
@@ -664,6 +667,7 @@
 				8AAEBB942819DFE8002A5B8F /* ProjectsView.swift in Sources */,
 				8A882C9F281D7FFA004AA220 /* ProjectSummaryView.swift in Sources */,
 				8A8116532822FF83005C9CB1 /* SceneDelegate.swift in Sources */,
+				8AC9FDB828260DEA00D6AFC4 /* Error-CloudKitMessages.swift in Sources */,
 				8A2DE5782823592100CCFF42 /* DataController-Awards.swift in Sources */,
 				8AFF01F12821A038001FAC18 /* PurchaseButton.swift in Sources */,
 				8AC9FDAB2825D3D200D6AFC4 /* SharedItem.swift in Sources */,
