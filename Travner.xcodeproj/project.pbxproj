@@ -68,6 +68,7 @@
 		8AC9FDB42825E84600D6AFC4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB32825E84600D6AFC4 /* SignInView.swift */; };
 		8AC9FDB62826007700D6AFC4 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */; };
 		8AC9FDB828260DEA00D6AFC4 /* Error-CloudKitMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */; };
+		8AC9FDBA2826131900D6AFC4 /* CloudError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB92826131900D6AFC4 /* CloudError.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -185,6 +186,7 @@
 		8AC9FDB32825E84600D6AFC4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error-CloudKitMessages.swift"; sourceTree = "<group>"; };
+		8AC9FDB92826131900D6AFC4 /* CloudError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudError.swift; sourceTree = "<group>"; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				8A7B2F17281DABBF005DE487 /* Awards */,
 				8AFF01F62821A5F4001FAC18 /* Unlock */,
 				8AC9FDAE2825D40300D6AFC4 /* Community */,
+				8AC9FDB92826131900D6AFC4 /* CloudError.swift */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				8A96C0B828218D7B00336052 /* UnlockManager.swift in Sources */,
 				8AAEBB982819E489002A5B8F /* Project-CoreDataHelpers.swift in Sources */,
 				8A9019F5281C31B900490A76 /* Color-Additions.swift in Sources */,
+				8AC9FDBA2826131900D6AFC4 /* CloudError.swift in Sources */,
 				8A6040E5281A010400794895 /* EditProjectView.swift in Sources */,
 				8AC9FDA92825D3BC00D6AFC4 /* SharedProject.swift in Sources */,
 				8A2DE576282358F500CCFF42 /* DataController-Reminders.swift in Sources */,

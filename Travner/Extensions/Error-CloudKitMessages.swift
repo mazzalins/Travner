@@ -9,7 +9,7 @@ import CloudKit
 import Foundation
 
 extension Error {
-    func getCloudKitError() -> String {
+    func getCloudKitError() -> CloudError {
         guard let error = self as? CKError else {
             return "An unknown error occurred: \(self.localizedDescription)"
         }
