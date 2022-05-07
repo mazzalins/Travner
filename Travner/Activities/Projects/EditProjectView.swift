@@ -279,7 +279,11 @@ struct EditProjectView: View {
 
         let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [id])
 
-        operation.modifyRecordsCompletionBlock = { _, _, _ in
+        operation.modifyRecordsCompletionBlock = { _, _, error in
+            if let error = error {
+                cloudError = error.getCloudKitError()
+            }
+
             updateCloudStatus()
         }
 
