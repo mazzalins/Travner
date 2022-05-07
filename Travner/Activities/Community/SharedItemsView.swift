@@ -15,6 +15,7 @@ struct SharedItemsView: View {
     @State private var itemsLoadState = LoadState.inactive
 
     @State private var messages = [ChatMessage]()
+    @State private var messagesLoadState = LoadState.inactive
 
     @AppStorage("username") var username: String?
     @State private var showingSignIn = false
@@ -67,13 +68,19 @@ struct SharedItemsView: View {
                 header: Text("Chat about this project…"),
                 footer: messagesFooter
             ) {
-                Text("Messages go here")
+                if messagesLoadState == .success {
+                    ForEach(messages) { message in
+                        Text("\(Text(message.from).bold()): \(message.text)")
+                            .multilineTextAlignment(.leading)
+                    }
+                }
             }
         }
         .listStyle(InsetGroupedListStyle())
         .navigationTitle(project.title)
         .onAppear {
             fetchSharedItems()
+            fetchChatMessages()
         }
         .sheet(isPresented: $showingSignIn, content: SignInView.init)
     }
@@ -107,6 +114,35 @@ struct SharedItemsView: View {
         operation.queryCompletionBlock = { _, _ in
             if items.isEmpty {
                 itemsLoadState = .noResults
+            }
+        }
+
+        CKContainer.default().publicCloudDatabase.add(operation)
+    }
+
+    func fetchChatMessages() {
+        guard messagesLoadState == .inactive else { return }
+        messagesLoadState = .loading
+
+        let recordID = CKRecord.ID(recordName: project.id)
+        let reference = CKRecord.Reference(recordID: recordID, action: .none)
+        let pred = NSPredicate(format: "project == %@", reference)
+        let sort = NSSortDescriptor(key: "creationDate", ascending: true)
+        let query = CKQuery(recordType: "Message", predicate: pred)
+        query.sortDescriptors = [sort]
+
+        let operation = CKQueryOperation(query: query)
+        operation.desiredKeys = ["from", "text"]
+
+        operation.recordFetchedBlock = { record in
+            let message = ChatMessage(from: record)
+            messages.append(message)
+            messagesLoadState = .success
+        }
+
+        operation.queryCompletionBlock = { _, _ in
+            if messages.isEmpty {
+                messagesLoadState = .noResults
             }
         }
 
