@@ -66,6 +66,7 @@
 		8AC9FDB02825D4E600D6AFC4 /* SharedProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */; };
 		8AC9FDB22825D77700D6AFC4 /* SharedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */; };
 		8AC9FDB42825E84600D6AFC4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB32825E84600D6AFC4 /* SignInView.swift */; };
+		8AC9FDB62826007700D6AFC4 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -181,6 +182,7 @@
 		8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProjectsView.swift; sourceTree = "<group>"; };
 		8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemsView.swift; sourceTree = "<group>"; };
 		8AC9FDB32825E84600D6AFC4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				8AC9FDAF2825D4E600D6AFC4 /* SharedProjectsView.swift */,
 				8AC9FDB32825E84600D6AFC4 /* SignInView.swift */,
 				8AC9FDB12825D77700D6AFC4 /* SharedItemsView.swift */,
+				8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				8AAEBB962819E097002A5B8F /* Item-CoreDataHelpers.swift in Sources */,
 				8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */,
 				8A18162E2820599A00C7F55B /* ProjectsViewModel.swift in Sources */,
+				8AC9FDB62826007700D6AFC4 /* ChatMessage.swift in Sources */,
 				8A6040DB2819F72D00794895 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
