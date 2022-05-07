@@ -21,6 +21,7 @@ struct TravnerApp: App {
         _unlockManager = StateObject(wrappedValue: unlockManager)
 
         #if targetEnvironment(simulator)
+        // Force a specific username because Sign In With Apple doesn't work in the simulator.
         UserDefaults.standard.set("mazzalins", forKey: "username")
         #endif
     }
