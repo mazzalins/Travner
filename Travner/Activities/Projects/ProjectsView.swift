@@ -83,7 +83,8 @@ struct ProjectsView: View {
                 ActionSheet(title: Text("Sort items"), message: nil, buttons: [
                     .default(Text("Optimized")) { viewModel.sortOrder = .optimized },
                     .default(Text("Creation Date")) { viewModel.sortOrder = .creationDate },
-                    .default(Text("Title")) { viewModel.sortOrder = .title }
+                    .default(Text("Title")) { viewModel.sortOrder = .title },
+                    .cancel()
                 ])
             }
 
