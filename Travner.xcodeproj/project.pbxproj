@@ -253,6 +253,7 @@
 				8A3BD8D3282377D5009481FC /* DataProvider.swift */,
 				8A2DE5682823582700CCFF42 /* Assets.xcassets */,
 				8A2DE56A2823582700CCFF42 /* Info.plist */,
+				8A2DE57C28235A1200CCFF42 /* TravnerWidgetExtension.entitlements */,
 			);
 			path = TravnerWidget;
 			sourceTree = "<group>";
@@ -361,7 +362,6 @@
 		8AAEBB71281995B1002A5B8F = {
 			isa = PBXGroup;
 			children = (
-				8A2DE57C28235A1200CCFF42 /* TravnerWidgetExtension.entitlements */,
 				8AAEBB7C281995B1002A5B8F /* Travner */,
 				8AE0078B281E94850084A75F /* TravnerTests */,
 				8A948384281F2D2C003EA463 /* TravnerUITests */,
@@ -783,7 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = TravnerWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TravnerWidget/TravnerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZK5R34847G;
@@ -811,7 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = TravnerWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TravnerWidget/TravnerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZK5R34847G;
