@@ -13,7 +13,7 @@ extension DataController {
         guard count(for: Project.fetchRequest()) >= 5 else { return }
 
         let allScenes = UIApplication.shared.connectedScenes
-        let scene = allScenes.first { $0.activationState == .foregroundActive }
+        let scene = allScenes.first
 
         if let windowScene = scene as? UIWindowScene {
             SKStoreReviewController.requestReview(in: windowScene)
