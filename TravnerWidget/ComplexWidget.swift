@@ -41,7 +41,7 @@ struct TravnerWidgetMultipleEntryView: View {
         VStack(spacing: 5) {
             ForEach(items) { item in
                 HStack {
-                    Color(item.project?.color ?? "Light Blue")
+                    Color(item.project?.color ?? "Blue")
                         .frame(width: 5)
                         .clipShape(Capsule())
 

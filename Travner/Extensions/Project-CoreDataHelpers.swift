@@ -10,18 +10,18 @@ import SwiftUI
 
 extension Project {
     static let colors = [
-        "Pink",
-        "Purple",
         "Red",
         "Orange",
-        "Gold",
+        "Yellow",
         "Green",
+        "Mint",
         "Teal",
-        "Light Blue",
-        "Dark Blue",
-        "Midnight",
-        "Dark Gray",
-        "Gray"
+        "Cyan",
+        "Blue",
+        "Indigo",
+        "Purple",
+        "Pink",
+        "Brown"
     ]
 
     var projectTitle: String {
@@ -33,7 +33,7 @@ extension Project {
     }
 
     var projectColor: String {
-        color ?? "Light Blue"
+        color ?? "Blue"
     }
 
     var projectItems: [Item] {

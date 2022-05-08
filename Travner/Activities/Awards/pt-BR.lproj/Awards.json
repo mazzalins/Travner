@@ -2,7 +2,7 @@
     {
         "name": "Primeiros Passos",
         "description": "Adicione seu primeiro item.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 1,
         "image": "figure.walk"
@@ -10,7 +10,7 @@
     {
         "name": "Um Ótimo Começo",
         "description": "Adicione 10 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 10,
         "image": "hand.thumbsup.fill"
@@ -18,7 +18,7 @@
     {
         "name": "Seguindo em Frente",
         "description": "Adicione 20 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 20,
         "image": "tray.and.arrow.up.fill"
@@ -26,7 +26,7 @@
     {
         "name": "Ganhando Velocidade",
         "description": "Adicione 50 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 50,
         "image": "speedometer"
@@ -34,7 +34,7 @@
     {
         "name": "Fazendo Ondas",
         "description": "Adicione 100 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 100,
         "image": "dot.radiowaves.left.and.right"
@@ -42,7 +42,7 @@
     {
         "name": "Alto Desempenho",
         "description": "Adicione 250 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 250,
         "image": "square.stack.3d.up.fill"
@@ -50,7 +50,7 @@
     {
         "name": "Artista Estrela",
         "description": "Adicione 500 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 500,
         "image": "star.circle.fill"
@@ -58,7 +58,7 @@
     {
         "name": "Artista Campeão",
         "description": "Adicione 1000 itens.",
-        "color": "Light Blue",
+        "color": "Blue",
         "criterion": "items",
         "value": 1000,
         "image": "crown.fill"
