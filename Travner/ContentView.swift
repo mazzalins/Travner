@@ -12,7 +12,7 @@ struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
     @EnvironmentObject var dataController: DataController
 
-    private let newProjectActivity = "com.mazzalins.Travner.newProject"
+    private let newProjectActivity = "dev.mazzalins.Travner.newProject"
 
     var body: some View {
         TabView(selection: $selectedView) {

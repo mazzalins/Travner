@@ -46,7 +46,7 @@ class DataController: ObservableObject {
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         } else {
-            let groupID = "group.com.mazzalins.Travner"
+            let groupID = "group.dev.mazzalins.Travner"
 
             if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: groupID) {
                 container.persistentStoreDescriptions.first?.url = url.appendingPathComponent("Main.sqlite")

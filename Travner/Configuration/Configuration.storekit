@@ -15,7 +15,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "com.mazzalins.Travner.unlock",
+      "productID" : "dev.mazzalins.Travner.unlock",
       "referenceName" : "Unlock Full App",
       "type" : "NonConsumable"
     }
