@@ -291,7 +291,6 @@ struct EditProjectView: View {
             } else {
                 if deleteLocal {
                     dataController.delete(project)
-                    presentationMode.wrappedValue.dismiss()
                 }
             }
 
