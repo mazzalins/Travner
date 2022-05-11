@@ -69,6 +69,7 @@
 		8AC9FDB62826007700D6AFC4 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */; };
 		8AC9FDB828260DEA00D6AFC4 /* Error-CloudKitMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */; };
 		8AC9FDBA2826131900D6AFC4 /* CloudError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9FDB92826131900D6AFC4 /* CloudError.swift */; };
+		8AD49731282AE92B000C44A7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD49730282AE92B000C44A7 /* CloudKit.framework */; };
 		8AE0078D281E94850084A75F /* TravnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0078C281E94850084A75F /* TravnerTests.swift */; };
 		8AE00794281E99E30084A75F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE00793281E99E30084A75F /* AssetTests.swift */; };
 		8AFF01EF28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF01EE28219FE5001FAC18 /* SKProduct-LocalizedPrice.swift */; };
@@ -187,6 +188,7 @@
 		8AC9FDB52826007700D6AFC4 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		8AC9FDB728260DEA00D6AFC4 /* Error-CloudKitMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error-CloudKitMessages.swift"; sourceTree = "<group>"; };
 		8AC9FDB92826131900D6AFC4 /* CloudError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudError.swift; sourceTree = "<group>"; };
+		8AD49730282AE92B000C44A7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8AE0078A281E94850084A75F /* TravnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0078C281E94850084A75F /* TravnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravnerTests.swift; sourceTree = "<group>"; };
 		8AE00793281E99E30084A75F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD49731282AE92B000C44A7 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +241,7 @@
 		8A2DE5602823582400CCFF42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AD49730282AE92B000C44A7 /* CloudKit.framework */,
 				8A2DE5612823582400CCFF42 /* WidgetKit.framework */,
 				8A2DE5632823582400CCFF42 /* SwiftUI.framework */,
 			);
@@ -837,13 +841,17 @@
 		8A94838B281F2D2C003EA463 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZK5R34847G;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.mazzalins.TravnerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -854,13 +862,17 @@
 		8A94838C281F2D2C003EA463 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZK5R34847G;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.mazzalins.TravnerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1050,6 +1062,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZK5R34847G;
@@ -1068,6 +1081,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZK5R34847G;
