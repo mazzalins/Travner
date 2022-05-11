@@ -18,15 +18,15 @@ class TravnerUITests: XCTestCase {
         app.launch()
     }
 
-    func testAppHas4Tabs() throws {
-        XCTAssertEqual(app.tabBars.buttons.count, 4, "There should be 4 tabs in the app.")
+    func testAppHas5Tabs() throws {
+        XCTAssertEqual(app.tabBars.buttons.count, 5, "There should be 5 tabs in the app.")
     }
 
     func testOpenTabAddsProjects() {
         app.buttons["Open"].tap()
         XCTAssertEqual(app.tables.cells.count, 0, "There should be no list rows initially.")
 
-        for tapCount in 1...5 {
+        for tapCount in 1...3 {
             app.buttons["Add Project"].tap()
             XCTAssertEqual(app.tables.cells.count, tapCount, "There should be \(tapCount) rows(s) in the list.")
         }
