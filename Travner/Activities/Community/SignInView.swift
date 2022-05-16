@@ -40,10 +40,6 @@ struct SignInView: View {
                         SignInWithAppleButton(onRequest: configureSignIn, onCompletion: completeSignIn)
                             .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
                             .frame(height: 44)
-
-                        Button("Cancel", action: close)
-                            .frame(maxWidth: .infinity)
-                            .padding()
                     }
                 case .authorized:
                     Text("You're all set!")
@@ -56,6 +52,18 @@ struct SignInView: View {
                 }
             }
             .padding()
+            .toolbar {
+                Button(action: dismiss, label: {
+                    Circle()
+                        .fill(Color(.secondarySystemBackground))
+                        .frame(width: 30, height: 30)
+                        .overlay(
+                            Image(systemName: "xmark")
+                                .font(.system(size: 12, weight: .heavy, design: .rounded))
+                                .foregroundColor(.secondary)
+                        )
+                })
+            }
             .navigationTitle("Please sign in")
         }
     }
@@ -80,7 +88,7 @@ struct SignInView: View {
                     UserDefaults.standard.set(username, forKey: "username")
                     NSUbiquitousKeyValueStore.default.set(username, forKey: "username")
                     status = .authorized
-                    close()
+                    dismiss()
                     return
                 }
             }
@@ -99,7 +107,7 @@ struct SignInView: View {
         }
     }
 
-    func close() {
+    func dismiss() {
         presentationMode.wrappedValue.dismiss()
     }
 }

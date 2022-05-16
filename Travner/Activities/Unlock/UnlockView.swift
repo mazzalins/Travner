@@ -13,26 +13,40 @@ struct UnlockView: View {
     @EnvironmentObject var unlockManager: UnlockManager
 
     var body: some View {
-        VStack {
-            switch unlockManager.requestState {
-            case .loaded(let product):
-                ProductView(product: product)
-            case .failed(_):
-                Text("Sorry, there was an error loading the store. Please try again later.")
-            case .loading:
-                ProgressView("Loading…")
-            case .purchased:
-                Text("Thank you!")
-            case .deferred:
-                Text("Thank you! Your request is pending approval, but you can carry on using the app in the meantime.")
+        NavigationView {
+            Group {
+                switch unlockManager.requestState {
+                case .loaded(let product):
+                    ProductView(product: product)
+                case .failed:
+                    Text("Sorry, there was an error loading the store. Please try again later.")
+                case .loading:
+                    ProgressView("Loading…")
+                case .purchased:
+                    Text("Thank you!")
+                case .deferred:
+                    // swiftlint:disable:next line_length
+                    Text("Thank you! Your request is pending approval, but you can carry on using the app in the meantime.")
+                }
             }
-
-            Button("Dismiss", action: dismiss)
-        }
-        .padding()
-        .onReceive(unlockManager.$requestState) { value in
-            if case .purchased = value {
-                dismiss()
+            .padding()
+            .navigationBarTitle("All Access Package")
+            .toolbar {
+                Button(action: dismiss, label: {
+                    Circle()
+                        .fill(Color(.secondarySystemBackground))
+                        .frame(width: 30, height: 30)
+                        .overlay(
+                            Image(systemName: "xmark")
+                                .font(.system(size: 12, weight: .heavy, design: .rounded))
+                                .foregroundColor(.secondary)
+                        )
+                })
+            }
+            .onReceive(unlockManager.$requestState) { value in
+                if case .purchased = value {
+                    dismiss()
+                }
             }
         }
     }
