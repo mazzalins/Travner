@@ -14,5 +14,5 @@ struct SharedProject: Identifiable {
     let owner: String
     let closed: Bool
 
-    static let example = SharedProject(id: "1", title: "Example", detail: "Detail", owner: "TwoStraws", closed: false)
+    static let example = SharedProject(id: "1", title: "Example", detail: "Detail", owner: "mazzalins", closed: false)
 }

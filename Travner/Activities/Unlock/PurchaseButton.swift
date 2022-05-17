@@ -10,10 +10,11 @@ import SwiftUI
 struct PurchaseButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(minWidth: 200, minHeight: 44)
+            .frame(maxWidth: .infinity, minHeight: 44)
             .background(Color("Blue"))
-            .clipShape(Capsule())
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .foregroundColor(.white)
             .opacity(configuration.isPressed ? 0.5 : 1)
+            .font(.body.bold())
     }
 }
