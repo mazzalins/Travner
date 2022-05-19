@@ -9,7 +9,7 @@ import CloudKit
 import SwiftUI
 
 struct SharedItemsView: View {
-    let project: SharedProject
+    let guide: SharedGuide
 
     @State private var items = [SharedItem]()
     @State private var itemsLoadState = LoadState.inactive
@@ -68,7 +68,7 @@ struct SharedItemsView: View {
             }
 
             Section(
-                header: Text("Chat about this project…"),
+                header: Text("Chat about this guide…"),
                 footer: messagesFooter
             ) {
                 if messagesLoadState == .success {
@@ -80,7 +80,7 @@ struct SharedItemsView: View {
             }
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle(project.title)
+        .navigationTitle(guide.title)
         .onAppear {
             fetchSharedItems()
             fetchChatMessages()
@@ -98,9 +98,9 @@ struct SharedItemsView: View {
         guard itemsLoadState == .inactive else { return }
         itemsLoadState = .loading
 
-        let recordID = CKRecord.ID(recordName: project.id)
+        let recordID = CKRecord.ID(recordName: guide.id)
         let reference = CKRecord.Reference(recordID: recordID, action: .none)
-        let pred = NSPredicate(format: "project == %@", reference)
+        let pred = NSPredicate(format: "guide == %@", reference)
         let sort = NSSortDescriptor(key: "title", ascending: true)
         let query = CKQuery(recordType: "Item", predicate: pred)
         query.sortDescriptors = [sort]
@@ -137,9 +137,9 @@ struct SharedItemsView: View {
         guard messagesLoadState == .inactive else { return }
         messagesLoadState = .loading
 
-        let recordID = CKRecord.ID(recordName: project.id)
+        let recordID = CKRecord.ID(recordName: guide.id)
         let reference = CKRecord.Reference(recordID: recordID, action: .none)
-        let pred = NSPredicate(format: "project == %@", reference)
+        let pred = NSPredicate(format: "guide == %@", reference)
         let sort = NSSortDescriptor(key: "creationDate", ascending: true)
         let query = CKQuery(recordType: "Message", predicate: pred)
         query.sortDescriptors = [sort]
@@ -179,8 +179,8 @@ struct SharedItemsView: View {
         message["from"] = username
         message["text"] = text
 
-        let projectID = CKRecord.ID(recordName: project.id)
-        message["project"] = CKRecord.Reference(recordID: projectID, action: .deleteSelf)
+        let guideID = CKRecord.ID(recordName: guide.id)
+        message["guide"] = CKRecord.Reference(recordID: guideID, action: .deleteSelf)
 
         let backupChatText = newChatText
         newChatText = ""
@@ -200,6 +200,6 @@ struct SharedItemsView: View {
 
 struct SharedItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        SharedItemsView(project: SharedProject.example)
+        SharedItemsView(guide: SharedGuide.example)
     }
 }

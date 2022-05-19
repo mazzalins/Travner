@@ -10,7 +10,7 @@ import StoreKit
 
 extension DataController {
     func appLaunched() {
-        guard count(for: Project.fetchRequest()) >= 5 else { return }
+        guard count(for: Guide.fetchRequest()) >= 5 else { return }
 
         let allScenes = UIApplication.shared.connectedScenes
         let scene = allScenes.first

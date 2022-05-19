@@ -1,5 +1,5 @@
 //
-//  Project-CoreDataHelpers.swift
+//  Guide-CoreDataHelpers.swift
 //  Travner
 //
 //  Created by Lorenzo Lins Mazzarotto on 27/04/22.
@@ -8,7 +8,7 @@
 import CloudKit
 import SwiftUI
 
-extension Project {
+extension Guide {
     static let colors = [
         "Red",
         "Orange",
@@ -24,24 +24,24 @@ extension Project {
         "Brown"
     ]
 
-    var projectTitle: String {
-        title ?? NSLocalizedString("New Project", comment: "Create a new project")
+    var guideTitle: String {
+        title ?? NSLocalizedString("New Guide", comment: "Create a new guide")
     }
 
-    var projectDetail: String {
+    var guideDetail: String {
         detail ?? ""
     }
 
-    var projectColor: String {
+    var guideColor: String {
         color ?? "Blue"
     }
 
-    var projectItems: [Item] {
+    var guideItems: [Item] {
         items?.allObjects as? [Item] ?? []
     }
 
-    var projectItemsDefaultSorted: [Item] {
-        projectItems.sorted { first, second in
+    var guideItemsDefaultSorted: [Item] {
+        guideItems.sorted { first, second in
             if first.completed == false {
                 if second.completed == true {
                     return true
@@ -72,49 +72,49 @@ extension Project {
 
     var label: LocalizedStringKey {
         // swiftlint:disable:next line_length
-        LocalizedStringKey("\(projectTitle), \(projectItems.count) items, \(completionAmount * 100, specifier: "%g")% complete.")
+        LocalizedStringKey("\(guideTitle), \(guideItems.count) items, \(completionAmount * 100, specifier: "%g")% complete.")
     }
 
-    static var example: Project {
+    static var example: Guide {
         let controller = DataController.preview
         let viewContext = controller.container.viewContext
 
-        let project = Project(context: viewContext)
-        project.title = "Example Project"
-        project.detail = "This is an example project"
-        project.closed = true
-        project.creationDate = Date()
-        return project
+        let guide = Guide(context: viewContext)
+        guide.title = "Example Guide"
+        guide.detail = "This is an example guide"
+        guide.closed = true
+        guide.creationDate = Date()
+        return guide
     }
 
-    func projectItems(using sortOrder: Item.SortOrder) -> [Item] {
+    func guideItems(using sortOrder: Item.SortOrder) -> [Item] {
         switch sortOrder {
         case .title:
-            return projectItems.sorted(by: \Item.itemTitle)
+            return guideItems.sorted(by: \Item.itemTitle)
         case .creationDate:
-            return projectItems.sorted(by: \Item.itemCreationDate)
+            return guideItems.sorted(by: \Item.itemCreationDate)
         case .optimized:
-            return projectItemsDefaultSorted
+            return guideItemsDefaultSorted
         }
     }
 
     func prepareCloudRecords(owner: String) -> [CKRecord] {
         let parentName = objectID.uriRepresentation().absoluteString
         let parentID = CKRecord.ID(recordName: parentName)
-        let parent = CKRecord(recordType: "Project", recordID: parentID)
-        parent["title"] = projectTitle
-        parent["detail"] = projectDetail
+        let parent = CKRecord(recordType: "Guide", recordID: parentID)
+        parent["title"] = guideTitle
+        parent["detail"] = guideDetail
         parent["owner"] = owner
         parent["closed"] = closed
 
-        var records = projectItemsDefaultSorted.map { item -> CKRecord in
+        var records = guideItemsDefaultSorted.map { item -> CKRecord in
             let childName = item.objectID.uriRepresentation().absoluteString
             let childID = CKRecord.ID(recordName: childName)
             let child = CKRecord(recordType: "Item", recordID: childID)
             child["title"] = item.itemTitle
             child["detail"] = item.itemDetail
             child["completed"] = item.completed
-            child["project"] = CKRecord.Reference(recordID: parentID, action: .deleteSelf)
+            child["guide"] = CKRecord.Reference(recordID: parentID, action: .deleteSelf)
             return child
         }
 

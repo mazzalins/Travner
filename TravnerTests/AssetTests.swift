@@ -10,7 +10,7 @@ import XCTest
 
 class AssetTests: XCTestCase {
     func testColorsExist() {
-        for color in Project.colors {
+        for color in Guide.colors {
             XCTAssertNotNil(UIColor(named: color), "Failed to load color '\(color)' from asset catalog.")
         }
     }

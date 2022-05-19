@@ -12,7 +12,7 @@ struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
     @EnvironmentObject var dataController: DataController
 
-    private let newProjectActivity = "dev.mazzalins.Travner.newProject"
+    private let newGuideActivity = "dev.mazzalins.Travner.newGuide"
 
     var body: some View {
         TabView(selection: $selectedView) {
@@ -23,15 +23,15 @@ struct ContentView: View {
                     Text("Home")
                 }
 
-            ProjectsView(dataController: dataController, showClosedProjects: false)
-                .tag(ProjectsView.openTag)
+            GuidesView(dataController: dataController, showClosedGuides: false)
+                .tag(GuidesView.openTag)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Open")
                 }
 
-            ProjectsView(dataController: dataController, showClosedProjects: true)
-                .tag(ProjectsView.closedTag)
+            GuidesView(dataController: dataController, showClosedGuides: true)
+                .tag(GuidesView.closedTag)
                 .tabItem {
                     Image(systemName: "checkmark")
                     Text("Closed")
@@ -44,18 +44,18 @@ struct ContentView: View {
                     Text("Awards")
                 }
 
-            SharedProjectsView()
-                .tag(SharedProjectsView.tag)
+            SharedGuidesView()
+                .tag(SharedGuidesView.tag)
                 .tabItem {
                     Image(systemName: "person.3")
                     Text("Community")
                 }
         }
         .onContinueUserActivity(CSSearchableItemActionType, perform: moveToHome)
-        .onContinueUserActivity(newProjectActivity, perform: createProject)
-        .userActivity(newProjectActivity) { activity in
+        .onContinueUserActivity(newGuideActivity, perform: createGuide)
+        .userActivity(newGuideActivity) { activity in
             activity.isEligibleForPrediction = true
-            activity.title = "New Project"
+            activity.title = "New Guide"
         }
         .onOpenURL(perform: openURL)
     }
@@ -65,13 +65,13 @@ struct ContentView: View {
     }
 
     func openURL(_ url: URL) {
-        selectedView = ProjectsView.openTag
-        dataController.addProject()
+        selectedView = GuidesView.openTag
+        dataController.addGuide()
     }
 
-    func createProject(_ userActivity: NSUserActivity) {
-        selectedView = ProjectsView.openTag
-        dataController.addProject()
+    func createGuide(_ userActivity: NSUserActivity) {
+        selectedView = GuidesView.openTag
+        dataController.addGuide()
     }
 }
 

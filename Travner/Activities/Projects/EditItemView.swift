@@ -51,7 +51,7 @@ struct EditItemView: View {
     }
 
     func update() {
-        item.project?.objectWillChange.send()
+        item.guide?.objectWillChange.send()
 
         item.title = title
         item.detail = detail

@@ -10,10 +10,10 @@ import Foundation
 
 extension HomeView {
     class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
-        private let projectsController: NSFetchedResultsController<Project>
+        private let guidesController: NSFetchedResultsController<Guide>
         private let itemsController: NSFetchedResultsController<Item>
 
-        @Published var projects = [Project]()
+        @Published var guides = [Guide]()
         @Published var items = [Item]()
         @Published var selectedItem: Item?
 
@@ -25,20 +25,20 @@ extension HomeView {
         init(dataController: DataController) {
             self.dataController = dataController
 
-            // Construct a fetch request to show all open projects.
-            let projectRequest: NSFetchRequest<Project> = Project.fetchRequest()
-            projectRequest.predicate = NSPredicate(format: "closed = false")
-            projectRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Project.title, ascending: true)]
+            // Construct a fetch request to show all open guides.
+            let guideRequest: NSFetchRequest<Guide> = Guide.fetchRequest()
+            guideRequest.predicate = NSPredicate(format: "closed = false")
+            guideRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Guide.title, ascending: true)]
 
-            projectsController = NSFetchedResultsController(
-                fetchRequest: projectRequest,
+            guidesController = NSFetchedResultsController(
+                fetchRequest: guideRequest,
                 managedObjectContext: dataController.container.viewContext,
                 sectionNameKeyPath: nil,
                 cacheName: nil
             )
 
             // Construct a fetch request to show the 10 highest-priority,
-            // incomplete items from open projects.
+            // incomplete items from open guides.
             let itemRequest = dataController.fetchRequestForTopItems(count: 10)
 
             itemsController = NSFetchedResultsController(
@@ -50,13 +50,13 @@ extension HomeView {
 
             super.init()
 
-            projectsController.delegate = self
+            guidesController.delegate = self
             itemsController.delegate = self
 
             do {
-                try projectsController.performFetch()
+                try guidesController.performFetch()
                 try itemsController.performFetch()
-                projects = projectsController.fetchedObjects ?? []
+                guides = guidesController.fetchedObjects ?? []
                 items = itemsController.fetchedObjects ?? []
 
                 upNext = items.prefix(3)
@@ -72,7 +72,7 @@ extension HomeView {
             upNext = items.prefix(3)
             moreToExplore = items.dropFirst(3)
 
-            projects = projectsController.fetchedObjects ?? []
+            guides = guidesController.fetchedObjects ?? []
         }
 
         func addSampleData() {

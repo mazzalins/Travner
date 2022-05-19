@@ -14,7 +14,7 @@ struct ProductView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("You can add three projects for free, or pay \(product.localizedPrice) to add unlimited projects.")
+            Text("You can add three guides for free, or pay \(product.localizedPrice) to add unlimited guides.")
 
             Text("If you already bought the unlock on another device, press Restore Purchases.")
 

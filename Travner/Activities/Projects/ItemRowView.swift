@@ -23,8 +23,8 @@ struct ItemRowView: View {
         .accessibilityLabel(viewModel.label)
     }
 
-    init(project: Project, item: Item) {
-        let viewModel = ViewModel(project: project, item: item)
+    init(guide: Guide, item: Item) {
+        let viewModel = ViewModel(guide: guide, item: item)
         _viewModel = StateObject(wrappedValue: viewModel)
 
         self.item = item
@@ -33,6 +33,6 @@ struct ItemRowView: View {
 
 struct ItemRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRowView(project: Project.example, item: Item.example)
+        ItemRowView(guide: Guide.example, item: Item.example)
     }
 }

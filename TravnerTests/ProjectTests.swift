@@ -1,5 +1,5 @@
 //
-//  ProjectTests.swift
+//  GuideTests.swift
 //  TravnerTests
 //
 //  Created by Lorenzo Lins Mazzarotto on 01/05/22.
@@ -9,32 +9,32 @@ import CoreData
 import XCTest
 @testable import Travner
 
-class ProjectTests: BaseTestCase {
-    func testCreatingProjectsAndItems() {
+class GuideTests: BaseTestCase {
+    func testCreatingGuidesAndItems() {
         let targetCount = 10
 
         for _ in 0..<targetCount {
-            let project = Project(context: managedObjectContext)
+            let guide = Guide(context: managedObjectContext)
 
             for _ in 0..<targetCount {
                 let item = Item(context: managedObjectContext)
-                item.project = project
+                item.guide = guide
             }
         }
 
-        XCTAssertEqual(dataController.count(for: Project.fetchRequest()), targetCount)
+        XCTAssertEqual(dataController.count(for: Guide.fetchRequest()), targetCount)
         XCTAssertEqual(dataController.count(for: Item.fetchRequest()), targetCount * targetCount)
     }
 
-    func testDeletingProjectCascadeDeletesItems() throws {
+    func testDeletingGuideCascadeDeletesItems() throws {
         try dataController.createSampleData()
 
-        let request = NSFetchRequest<Project>(entityName: "Project")
-        let projects = try managedObjectContext.fetch(request)
+        let request = NSFetchRequest<Guide>(entityName: "Guide")
+        let guides = try managedObjectContext.fetch(request)
 
-        dataController.delete(projects[0])
+        dataController.delete(guides[0])
 
-        XCTAssertEqual(dataController.count(for: Project.fetchRequest()), 4)
+        XCTAssertEqual(dataController.count(for: Guide.fetchRequest()), 4)
         XCTAssertEqual(dataController.count(for: Item.fetchRequest()), 40)
     }
 }

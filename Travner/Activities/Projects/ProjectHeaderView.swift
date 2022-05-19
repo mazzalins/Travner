@@ -1,5 +1,5 @@
 //
-//  ProjectHeaderView.swift
+//  GuideHeaderView.swift
 //  Travner
 //
 //  Created by Lorenzo Lins Mazzarotto on 28/04/22.
@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-struct ProjectHeaderView: View {
-    @ObservedObject var project: Project
+struct GuideHeaderView: View {
+    @ObservedObject var guide: Guide
 
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(project.projectTitle)
+                Text(guide.guideTitle)
 
-                ProgressView(value: project.completionAmount)
-                    .accentColor(Color(project.projectColor))
+                ProgressView(value: guide.completionAmount)
+                    .accentColor(Color(guide.guideColor))
             }
 
             Spacer()
 
-            NavigationLink(destination: EditProjectView(project: project)) {
+            NavigationLink(destination: EditGuideView(guide: guide)) {
                 Image(systemName: "square.and.pencil")
                     .imageScale(.large)
             }
@@ -31,8 +31,8 @@ struct ProjectHeaderView: View {
     }
 }
 
-struct ProjectHeaderView_Previews: PreviewProvider {
+struct GuideHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectHeaderView(project: Project.example)
+        GuideHeaderView(guide: Guide.example)
     }
 }

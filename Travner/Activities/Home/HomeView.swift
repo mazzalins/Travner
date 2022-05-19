@@ -14,7 +14,7 @@ struct HomeView: View {
 
     @StateObject var viewModel: ViewModel
 
-    var projectRows: [GridItem] {
+    var guideRows: [GridItem] {
         [GridItem(.fixed(100))]
     }
 
@@ -38,8 +38,8 @@ struct HomeView: View {
 
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: projectRows) {
-                            ForEach(viewModel.projects, content: ProjectSummaryView.init)
+                        LazyHGrid(rows: guideRows) {
+                            ForEach(viewModel.guides, content: GuideSummaryView.init)
                         }
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
@@ -55,7 +55,7 @@ struct HomeView: View {
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
             .toolbar {
-                if viewModel.projects.isEmpty {
+                if viewModel.guides.isEmpty {
                     Button("Add Data", action: viewModel.addSampleData)
                 } else {
                     Button("Delete all", action: viewModel.dataController.deleteAll)

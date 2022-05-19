@@ -1,5 +1,5 @@
 //
-//  ProjectSummaryView.swift
+//  GuideSummaryView.swift
 //  Travner
 //
 //  Created by Lorenzo Lins Mazzarotto on 30/04/22.
@@ -7,32 +7,32 @@
 
 import SwiftUI
 
-struct ProjectSummaryView: View {
-    @ObservedObject var project: Project
+struct GuideSummaryView: View {
+    @ObservedObject var guide: Guide
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(project.projectItems.count) items")
+            Text("\(guide.guideItems.count) items")
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            Text(project.projectTitle)
+            Text(guide.guideTitle)
                 .font(.title2)
 
-            ProgressView(value: project.completionAmount)
-                .accentColor(Color(project.projectColor))
+            ProgressView(value: guide.completionAmount)
+                .accentColor(Color(guide.guideColor))
         }
         .padding()
         .background(Color.secondarySystemGroupedBackground)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.2), radius: 5)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(project.label)
+        .accessibilityLabel(guide.label)
     }
 }
 
-struct ProjectSummaryView_Previews: PreviewProvider {
+struct GuideSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectSummaryView(project: Project.example)
+        GuideSummaryView(guide: Guide.example)
     }
 }

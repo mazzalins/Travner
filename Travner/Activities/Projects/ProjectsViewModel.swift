@@ -1,5 +1,5 @@
 //
-//  ProjectsViewModel.swift
+//  GuidesViewModel.swift
 //  Travner
 //
 //  Created by Lorenzo Lins Mazzarotto on 02/05/22.
@@ -8,27 +8,27 @@
 import CoreData
 import Foundation
 
-extension ProjectsView {
+extension GuidesView {
     class ViewModel: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
         let dataController: DataController
 
         var sortOrder = Item.SortOrder.optimized
-        let showClosedProjects: Bool
+        let showClosedGuides: Bool
 
-        private let projectsController: NSFetchedResultsController<Project>
-        @Published var projects = [Project]()
+        private let guidesController: NSFetchedResultsController<Guide>
+        @Published var guides = [Guide]()
 
         @Published var showingUnlockView = false
 
-        init(dataController: DataController, showClosedProjects: Bool) {
+        init(dataController: DataController, showClosedGuides: Bool) {
             self.dataController = dataController
-            self.showClosedProjects = showClosedProjects
+            self.showClosedGuides = showClosedGuides
 
-            let request: NSFetchRequest<Project> = Project.fetchRequest()
-            request.sortDescriptors = [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)]
-            request.predicate = NSPredicate(format: "closed = %d", showClosedProjects)
+            let request: NSFetchRequest<Guide> = Guide.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(keyPath: \Guide.creationDate, ascending: false)]
+            request.predicate = NSPredicate(format: "closed = %d", showClosedGuides)
 
-            projectsController = NSFetchedResultsController(
+            guidesController = NSFetchedResultsController(
                 fetchRequest: request,
                 managedObjectContext: dataController.container.viewContext,
                 sectionNameKeyPath: nil,
@@ -36,33 +36,33 @@ extension ProjectsView {
             )
 
             super.init()
-            projectsController.delegate = self
+            guidesController.delegate = self
 
             do {
-                try projectsController.performFetch()
-                projects = projectsController.fetchedObjects ?? []
+                try guidesController.performFetch()
+                guides = guidesController.fetchedObjects ?? []
             } catch {
-                print("Failed to fetch projects")
+                print("Failed to fetch guides")
             }
         }
 
-        func addProject() {
-            if dataController.addProject() == false {
+        func addGuide() {
+            if dataController.addGuide() == false {
                 showingUnlockView.toggle()
             }
         }
 
-        func addItem(to project: Project) {
+        func addItem(to guide: Guide) {
             let item = Item(context: dataController.container.viewContext)
-            item.project = project
+            item.guide = guide
             item.priority = 2
             item.completed = false
             item.creationDate = Date()
             dataController.save()
         }
 
-        func delete(_ offsets: IndexSet, from project: Project) {
-            let allItems = project.projectItems(using: sortOrder)
+        func delete(_ offsets: IndexSet, from guide: Guide) {
+            let allItems = guide.guideItems(using: sortOrder)
 
             for offset in offsets {
                 let item = allItems[offset]
@@ -73,8 +73,8 @@ extension ProjectsView {
         }
 
         func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-            if let newProjects = controller.fetchedObjects as? [Project] {
-                projects = newProjects
+            if let newGuides = controller.fetchedObjects as? [Guide] {
+                guides = newGuides
             }
         }
     }

@@ -41,7 +41,7 @@ struct TravnerWidgetMultipleEntryView: View {
         VStack(spacing: 5) {
             ForEach(items) { item in
                 HStack {
-                    Color(item.project?.color ?? "Blue")
+                    Color(item.guide?.color ?? "Blue")
                         .frame(width: 5)
                         .clipShape(Capsule())
 
@@ -50,8 +50,8 @@ struct TravnerWidgetMultipleEntryView: View {
                             .font(.headline)
                             .layoutPriority(1)
 
-                        if let projectTitle = item.project?.projectTitle {
-                            Text(projectTitle)
+                        if let guideTitle = item.guide?.guideTitle {
+                            Text(guideTitle)
                                 .foregroundColor(.secondary)
                         }
                     }

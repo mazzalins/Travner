@@ -9,7 +9,7 @@ import Foundation
 
 extension ItemRowView {
     class ViewModel: ObservableObject {
-        let project: Project
+        let guide: Guide
         let item: Item
 
         var title: String {
@@ -28,9 +28,9 @@ extension ItemRowView {
 
         var color: String? {
             if item.completed {
-                return project.projectColor
+                return guide.guideColor
             } else if item.priority == 3 {
-                return project.projectColor
+                return guide.guideColor
             } else {
                 return nil
             }
@@ -46,8 +46,8 @@ extension ItemRowView {
             }
         }
 
-        init(project: Project, item: Item) {
-            self.project = project
+        init(guide: Guide, item: Item) {
+            self.guide = guide
             self.item = item
         }
     }

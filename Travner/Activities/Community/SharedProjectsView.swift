@@ -1,5 +1,5 @@
 //
-//  SharedProjectsView.swift
+//  SharedGuidesView.swift
 //  Travner
 //
 //  Created by Lorenzo Lins Mazzarotto on 07/05/22.
@@ -8,10 +8,10 @@
 import CloudKit
 import SwiftUI
 
-struct SharedProjectsView: View {
+struct SharedGuidesView: View {
     static let tag: String? = "Community"
 
-    @State private var projects = [SharedProject]()
+    @State private var guides = [SharedGuide]()
     @State private var loadState = LoadState.inactive
 
     var body: some View {
@@ -23,30 +23,30 @@ struct SharedProjectsView: View {
                 case .noResults:
                     Text("No results")
                 case .success:
-                    List(projects) { project in
-                        NavigationLink(destination: SharedItemsView(project: project)) {
+                    List(guides) { guide in
+                        NavigationLink(destination: SharedItemsView(guide: guide)) {
                             VStack(alignment: .leading) {
-                                Text(project.title)
+                                Text(guide.title)
                                     .font(.headline)
-                                Text(project.owner)
+                                Text(guide.owner)
                             }
                         }
                     }
                     .listStyle(InsetGroupedListStyle())
                 }
             }
-            .navigationTitle("Shared Projects")
+            .navigationTitle("Shared Guides")
         }
-        .onAppear(perform: fetchSharedProjects)
+        .onAppear(perform: fetchSharedGuides)
     }
 
-    func fetchSharedProjects() {
+    func fetchSharedGuides() {
         guard loadState == .inactive else { return }
         loadState = .loading
 
         let pred = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-        let query = CKQuery(recordType: "Project", predicate: pred)
+        let query = CKQuery(recordType: "Guide", predicate: pred)
         query.sortDescriptors = [sort]
 
         let operation = CKQueryOperation(query: query)
@@ -60,13 +60,13 @@ struct SharedProjectsView: View {
             let owner = record["owner"] as? String ?? "No owner"
             let closed = record["closed"] as? Bool ?? false
 
-            let sharedProject = SharedProject(id: id, title: title, detail: detail, owner: owner, closed: closed)
-            projects.append(sharedProject)
+            let sharedGuide = SharedGuide(id: id, title: title, detail: detail, owner: owner, closed: closed)
+            guides.append(sharedGuide)
             loadState = .success
         }
 
         operation.queryCompletionBlock = { _, _ in
-            if projects.isEmpty {
+            if guides.isEmpty {
                 loadState = .noResults
             }
         }
@@ -75,8 +75,8 @@ struct SharedProjectsView: View {
     }
 }
 
-struct SharedProjectsView_Previews: PreviewProvider {
+struct SharedGuidesView_Previews: PreviewProvider {
     static var previews: some View {
-        SharedProjectsView()
+        SharedGuidesView()
     }
 }

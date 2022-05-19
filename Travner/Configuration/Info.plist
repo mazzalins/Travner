@@ -17,7 +17,7 @@
 	</array>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>dev.mazzalins.Travner.newProject</string>
+		<string>dev.mazzalins.Travner.newGuide</string>
 	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
@@ -25,9 +25,9 @@
 			<key>UIApplicationShortcutItemIconSymbolName</key>
 			<string>rectangle.stack.badge.plus</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>New Project</string>
+			<string>New Guide</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>travner://newProject</string>
+			<string>travner://newGuide</string>
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>

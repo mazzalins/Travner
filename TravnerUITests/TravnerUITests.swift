@@ -22,12 +22,12 @@ class TravnerUITests: XCTestCase {
         XCTAssertEqual(app.tabBars.buttons.count, 5, "There should be 5 tabs in the app.")
     }
 
-    func testOpenTabAddsProjects() {
+    func testOpenTabAddsGuides() {
         app.buttons["Open"].tap()
         XCTAssertEqual(app.tables.cells.count, 0, "There should be no list rows initially.")
 
         for tapCount in 1...3 {
-            app.buttons["Add Project"].tap()
+            app.buttons["Add Guide"].tap()
             XCTAssertEqual(app.tables.cells.count, tapCount, "There should be \(tapCount) rows(s) in the list.")
         }
     }
@@ -36,38 +36,38 @@ class TravnerUITests: XCTestCase {
         app.buttons["Open"].tap()
         XCTAssertEqual(app.tables.cells.count, 0, "There should be no list rows initially.")
 
-        app.buttons["Add Project"].tap()
-        XCTAssertEqual(app.tables.cells.count, 1, "There should be 1 list row after adding a project.")
+        app.buttons["Add Guide"].tap()
+        XCTAssertEqual(app.tables.cells.count, 1, "There should be 1 list row after adding a guide.")
 
         app.buttons["Add New Item"].tap()
         XCTAssertEqual(app.tables.cells.count, 2, "There should be 2 list rows after adding an item.")
     }
 
-    func testEditingProjectUpdatesCorrectly() {
+    func testEditingGuideUpdatesCorrectly() {
         app.buttons["Open"].tap()
         XCTAssertEqual(app.tables.cells.count, 0, "There should be no list rows initially.")
 
-        app.buttons["Add Project"].tap()
-        XCTAssertEqual(app.tables.cells.count, 1, "There should be 1 list row after adding a project.")
+        app.buttons["Add Guide"].tap()
+        XCTAssertEqual(app.tables.cells.count, 1, "There should be 1 list row after adding a guide.")
 
         app.buttons["Compose"].tap()
-        app.textFields["Project name"].tap()
+        app.textFields["Guide name"].tap()
 
         app.keys["space"].tap()
         app.keys["more"].tap()
         app.keys["2"].tap()
         app.buttons["Return"].tap()
 
-        app.buttons["Open Projects"].tap()
+        app.buttons["Open Guides"].tap()
 
         XCTAssertTrue(
-            app.tables.staticTexts["New Project 2"].exists,
-            "The new project name should be visible in the list."
+            app.tables.staticTexts["New Guide 2"].exists,
+            "The new guide name should be visible in the list."
         )
     }
 
     func testEditingItemUpdatesCorrectly() {
-        // Go to Open Projects and add one project and one item.
+        // Go to Open Guides and add one guide and one item.
         testAddingItemInsertsRows()
 
         app.buttons["New Item"].tap()
@@ -78,7 +78,7 @@ class TravnerUITests: XCTestCase {
         app.keys["2"].tap()
         app.buttons["Return"].tap()
 
-        app.buttons["Open Projects"].tap()
+        app.buttons["Open Guides"].tap()
 
         XCTAssertTrue(app.buttons["New Item 2"].exists, "The new item name should be visible in the list.")
     }

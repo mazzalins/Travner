@@ -94,24 +94,24 @@ class DataController: ObservableObject {
         return managedObjectModel
     }()
 
-    /// Creates example projects and items to make manual testing easier.
+    /// Creates example guides and items to make manual testing easier.
     /// - Throws: An NSError sent from calling save() on the NSManagedObjectContext.
     func createSampleData() throws {
         let viewContext = container.viewContext
 
-        for projectCounter in 1...5 {
-            let project = Project(context: viewContext)
-            project.title = "Project \(projectCounter)"
-            project.items = []
-            project.creationDate = Date()
-            project.closed = Bool.random()
+        for guideCounter in 1...5 {
+            let guide = Guide(context: viewContext)
+            guide.title = "Guide \(guideCounter)"
+            guide.items = []
+            guide.creationDate = Date()
+            guide.closed = Bool.random()
 
             for itemCounter in 1...10 {
                 let item = Item(context: viewContext)
                 item.title = "Item \(itemCounter)"
                 item.creationDate = Date()
                 item.completed = Bool.random()
-                item.project = project
+                item.guide = guide
                 item.priority = Int16.random(in: 1...3)
             }
         }
@@ -128,7 +128,7 @@ class DataController: ObservableObject {
         }
     }
 
-    func delete(_ object: Project) {
+    func delete(_ object: Guide) {
         let id = object.objectID.uriRepresentation().absoluteString
         CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
 
@@ -146,7 +146,7 @@ class DataController: ObservableObject {
         let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
         delete(fetchRequest1)
 
-        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Project.fetchRequest()
+        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Guide.fetchRequest()
         delete(fetchRequest2)
     }
 
@@ -166,7 +166,7 @@ class DataController: ObservableObject {
 
     func update(_ item: Item) {
         let itemID = item.objectID.uriRepresentation().absoluteString
-        let projectID = item.project?.objectID.uriRepresentation().absoluteString
+        let guideID = item.guide?.objectID.uriRepresentation().absoluteString
 
         let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
         attributeSet.title = item.title
@@ -174,7 +174,7 @@ class DataController: ObservableObject {
 
         let searchableItem = CSSearchableItem(
             uniqueIdentifier: itemID,
-            domainIdentifier: projectID,
+            domainIdentifier: guideID,
             attributeSet: attributeSet
         )
 
@@ -195,13 +195,13 @@ class DataController: ObservableObject {
         return try? container.viewContext.existingObject(with: id) as? Item
     }
 
-    @discardableResult func addProject() -> Bool {
-        let canCreate = fullVersionUnlocked || count(for: Project.fetchRequest()) < 3
+    @discardableResult func addGuide() -> Bool {
+        let canCreate = fullVersionUnlocked || count(for: Guide.fetchRequest()) < 3
 
         if canCreate {
-            let project = Project(context: container.viewContext)
-            project.closed = false
-            project.creationDate = Date()
+            let guide = Guide(context: container.viewContext)
+            guide.closed = false
+            guide.creationDate = Date()
             save()
             return true
         } else {
@@ -213,7 +213,7 @@ class DataController: ObservableObject {
         let itemRequest: NSFetchRequest<Item> = Item.fetchRequest()
 
         let completedPredicate = NSPredicate(format: "completed = false")
-        let openPredicate = NSPredicate(format: "project.closed = false")
+        let openPredicate = NSPredicate(format: "guide.closed = false")
         let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
         itemRequest.predicate = compoundPredicate
 

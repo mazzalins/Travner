@@ -1,5 +1,5 @@
 //
-//  EditProjectView.swift
+//  EditGuideView.swift
 //  Travner
 //
 //  Created by Lorenzo Lins Mazzarotto on 28/04/22.
@@ -9,12 +9,12 @@ import CloudKit
 import CoreHaptics
 import SwiftUI
 
-struct EditProjectView: View {
+struct EditGuideView: View {
     enum CloudStatus {
         case checking, exists, absent
     }
 
-    @ObservedObject var project: Project
+    @ObservedObject var guide: Guide
 
     @EnvironmentObject var dataController: DataController
     @Environment(\.presentationMode) var presentationMode
@@ -41,15 +41,15 @@ struct EditProjectView: View {
         GridItem(.adaptive(minimum: 44))
     ]
 
-    init(project: Project) {
-        self.project = project
+    init(guide: Guide) {
+        self.guide = guide
 
-        _title = State(wrappedValue: project.projectTitle)
-        _detail = State(wrappedValue: project.projectDetail)
-        _color = State(wrappedValue: project.projectColor)
+        _title = State(wrappedValue: guide.guideTitle)
+        _detail = State(wrappedValue: guide.guideDetail)
+        _color = State(wrappedValue: guide.guideColor)
 
-        if let projectReminderTime = project.reminderTime {
-            _reminderTime = State(wrappedValue: projectReminderTime)
+        if let guideReminderTime = guide.reminderTime {
+            _reminderTime = State(wrappedValue: guideReminderTime)
             _remindMe = State(wrappedValue: true)
         } else {
             _reminderTime = State(wrappedValue: Date())
@@ -60,18 +60,18 @@ struct EditProjectView: View {
     var body: some View {
         Form {
             Section(header: Text("Basic settings")) {
-                TextField("Project name", text: $title.onChange(update))
-                TextField("Description of this project", text: $detail.onChange(update))
+                TextField("Guide name", text: $title.onChange(update))
+                TextField("Description of this guide", text: $detail.onChange(update))
             }
 
-            Section(header: Text("Custom project color")) {
+            Section(header: Text("Custom guide color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(Project.colors, id: \.self, content: colorButton)
+                    ForEach(Guide.colors, id: \.self, content: colorButton)
                 }
                 .padding(.vertical)
             }
 
-            Section(header: Text("Project reminders")) {
+            Section(header: Text("Guide reminders")) {
                 Toggle("Show reminders", isOn: $remindMe.animation().onChange(update))
                     .alert(isPresented: $showingNotificationsError) {
                         Alert(
@@ -92,24 +92,24 @@ struct EditProjectView: View {
             }
 
             // swiftlint:disable:next line_length
-            Section(footer: Text("Closing a project moves it from the Open to Closed tab; deleting it removes the project completely.")) {
-                Button(project.closed ? "Reopen this project" : "Close this project", action: toggleClosed)
+            Section(footer: Text("Closing a guide moves it from the Open to Closed tab; deleting it removes the guide completely.")) {
+                Button(guide.closed ? "Reopen this guide" : "Close this guide", action: toggleClosed)
 
-                Button("Delete this project") {
+                Button("Delete this guide") {
                     showingDeleteConfirm.toggle()
                 }
                 .accentColor(.red)
                 .alert(isPresented: $showingDeleteConfirm) {
                     Alert(
-                        title: Text("Delete project?"),
-                        message: Text("Are you sure you want to delete this project? You will also delete all the items it contains."), // swiftlint:disable:this line_length
+                        title: Text("Delete guide?"),
+                        message: Text("Are you sure you want to delete this guide? You will also delete all the items it contains."), // swiftlint:disable:this line_length
                         primaryButton: .default(Text("Delete"), action: delete),
                         secondaryButton: .cancel()
                     )
                 }
             }
         }
-        .navigationTitle("Edit Project")
+        .navigationTitle("Edit Guide")
         .toolbar {
             switch cloudStatus {
             case .checking:
@@ -138,24 +138,24 @@ struct EditProjectView: View {
     }
 
     func update() {
-        project.title = title
-        project.detail = detail
-        project.color = color
+        guide.title = title
+        guide.detail = detail
+        guide.color = color
 
         if remindMe {
-            project.reminderTime = reminderTime
+            guide.reminderTime = reminderTime
 
-            dataController.addReminders(for: project) { success in
+            dataController.addReminders(for: guide) { success in
                 if success == false {
-                    project.reminderTime = nil
+                    guide.reminderTime = nil
                     remindMe = false
 
                     showingNotificationsError = true
                 }
             }
         } else {
-            project.reminderTime = nil
-            dataController.removeReminders(for: project)
+            guide.reminderTime = nil
+            dataController.removeReminders(for: guide)
         }
     }
 
@@ -163,15 +163,15 @@ struct EditProjectView: View {
         if cloudStatus == .exists {
             removeFromCloud(deleteLocal: true)
         } else {
-            dataController.delete(project)
+            dataController.delete(guide)
             presentationMode.wrappedValue.dismiss()
         }
     }
 
     func toggleClosed() {
-        project.closed.toggle()
+        guide.closed.toggle()
 
-        if project.closed {
+        if guide.closed {
             do {
                 try engine?.start()
 
@@ -249,7 +249,7 @@ struct EditProjectView: View {
 
     func uploadToCloud() {
         if let username = username {
-            let records = project.prepareCloudRecords(owner: username)
+            let records = guide.prepareCloudRecords(owner: username)
             let operation = CKModifyRecordsOperation(recordsToSave: records, recordIDsToDelete: nil)
             operation.savePolicy = .allKeys
 
@@ -270,7 +270,7 @@ struct EditProjectView: View {
     }
 
     func updateCloudStatus() {
-        project.checkCloudStatus { exists in
+        guide.checkCloudStatus { exists in
             if exists {
                 cloudStatus = .exists
             } else {
@@ -280,7 +280,7 @@ struct EditProjectView: View {
     }
 
     func removeFromCloud(deleteLocal: Bool) {
-        let name = project.objectID.uriRepresentation().absoluteString
+        let name = guide.objectID.uriRepresentation().absoluteString
         let id = CKRecord.ID(recordName: name)
 
         let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [id])
@@ -290,7 +290,7 @@ struct EditProjectView: View {
                 cloudError = error.getCloudKitError()
             } else {
                 if deleteLocal {
-                    dataController.delete(project)
+                    dataController.delete(guide)
                 }
             }
 
@@ -302,8 +302,8 @@ struct EditProjectView: View {
     }
 }
 
-struct EditProjectView_Previews: PreviewProvider {
+struct EditGuideView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProjectView(project: Project.example)
+        EditGuideView(guide: Guide.example)
     }
 }
